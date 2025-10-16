@@ -41,6 +41,10 @@ DISPLAY_CATEGORIES_ON_MENU = False
 PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}.html'
 
+# Index page configuration - move blog index to /blog/
+INDEX_SAVE_AS = 'blog/index.html'
+INDEX_URL = 'blog/index.html'
+
 # Article configuration
 ARTICLE_PATHS = ['articles']
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{slug}.html'
@@ -48,10 +52,10 @@ ARTICLE_URL = 'blog/{date:%Y}/{slug}.html'
 
 # Menu items
 MENUITEMS = [
-    ('About', '/about.html'),
+    ('About', '/'),
     ('Services', '/services.html'),
     ('Experience', '/experience.html'),
     ('Projects', '/projects.html'),
-    ('Blog', '/archives.html'),
+    ('Blog', '/blog/'),
     ('Contact', '/contact.html'),
 ]
