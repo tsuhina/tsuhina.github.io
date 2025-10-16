@@ -3,7 +3,7 @@ Slug: experience
 
 # Professional Experience
 
-![Professional Background]({static}/images/about/img.jpeg)
+<img src="{static}/images/about/img.jpeg" alt="Skills" style="float: right; margin: 0 0 20px 20px; max-width: 130px;">
 
 ## Freelance Decision Science Consultant
 **Heineken** | April 2025 - Present
@@ -74,10 +74,10 @@ Research focus: Fundamental understanding of molecular motion under confined con
 
 ## Skills & Expertise
 
-<img src="{static}/images/about/img.jpeg" alt="Skills Chart" style="max-width: 600px;">
+<img src="{static}/images/experience/skills.png" alt="Skills Chart" style="max-width: 200px;">
 
 ### Languages
-Python, SQL, R, Rust
+Python, SQL, bash/unix-scripting
 
 ### LLM & Information Retrieval
 OpenAI, HuggingFace, LangChain, ChromaDB, FAISS

@@ -31,7 +31,7 @@ jobs:
         run: uv sync
 
       - name: Build Pelican site
-        run: uv run pelican content -s publishconf.py
+        run: uv run pelican content -o output -s publishconf.py
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
