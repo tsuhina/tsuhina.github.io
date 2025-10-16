@@ -45,6 +45,23 @@ PAGE_URL = '{slug}.html'
 INDEX_SAVE_AS = 'blog/index.html'
 INDEX_URL = 'blog/index.html'
 
+# Disable auto-generated listing pages
+DIRECT_TEMPLATES = []
+AUTHOR_SAVE_AS = ''
+AUTHOR_URL = ''
+AUTHORS_SAVE_AS = ''
+AUTHORS_URL = ''
+CATEGORY_SAVE_AS = ''
+CATEGORY_URL = ''
+CATEGORIES_SAVE_AS = ''
+CATEGORIES_URL = ''
+TAG_SAVE_AS = ''
+TAG_URL = ''
+TAGS_SAVE_AS = ''
+TAGS_URL = ''
+ARCHIVES_SAVE_AS = ''
+ARCHIVES_URL = ''
+
 # Article configuration
 ARTICLE_PATHS = ['articles']
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{slug}.html'
