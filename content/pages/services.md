@@ -29,6 +29,12 @@ Large scale data processing and distributed computing. I work with distributed d
 **Technologies**: PySpark, Databricks, AWS (S3, Athena, Redshift), Azure (ADF, Synapse, Data Lake), GitHub Actions, Azure DevOps, Pandas, Polars
 
 
+## Entity Deduplication & Record Linkage
+Cleaning up duplicate records that accumulate when data comes from multiple systems. I build deduplication solutions using fuzzy matching, phonetic algorithms, and machine learning for probabilistic record matching. Work covers customer master data, product catalogs, and cross-system integration where the same entity appears differently across sources. These solutions process at scale, handling millions of records efficiently.
+
+**Technologies**: Python, Pandas, Polars, PySpark, RecordLinkage, Dedupe, Fuzzy matching libraries, Entity resolution
+
+
 ## RAG & LLM Applications
 Building intelligent applications using Retrieval Augmented Generation and Large Language Models. Delivered RAG based knowledge retrieval system at Rabobank (deployed to production). I build knowledge base Q&A systems and chatbots, implement information retrieval and semantic search, handle document analysis and processing, and create LLM optimization and evaluation frameworks.
 
