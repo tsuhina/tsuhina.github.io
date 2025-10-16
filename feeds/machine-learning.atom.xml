@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tomislav Suhina - Freelance Decision Scientist - Machine Learning</title><link href="https://tsuhina.github.io/" rel="alternate"/><link href="https://tsuhina.github.io/feeds/machine-learning.atom.xml" rel="self"/><id>https://tsuhina.github.io/</id><updated>2025-01-15T00:00:00+01:00</updated><entry><title>Building RAG Solutions: A Practical Guide</title><link href="https://tsuhina.github.io/blog/2025/building-rag-solutions-guide.html" rel="alternate"/><published>2025-01-15T00:00:00+01:00</published><updated>2025-01-15T00:00:00+01:00</updated><author><name>Tomislav Suhina</name></author><id>tag:tsuhina.github.io,2025-01-15:/blog/2025/building-rag-solutions-guide.html</id><summary type="html">&lt;p&gt;Learn how to build effective Retrieval-Augmented Generation systems for production use.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Building RAG Solutions: A Practical Guide&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="RAG Architecture" src="https://tsuhina.github.io/images/about/img.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;Retrieval-Augmented Generation (RAG) has become essential for building intelligent applications. In this guide, I'll walk through the key components.&lt;/p&gt;
+&lt;h2&gt;What is RAG?&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://tsuhina.github.io/images/about/img.jpeg" alt="RAG Diagram" style="max-width: 600px; margin: 20px 0;"&gt;&lt;/p&gt;
+&lt;p&gt;RAG combines the power of large language models with external knowledge retrieval...&lt;/p&gt;
+&lt;h2&gt;Implementation Steps&lt;/h2&gt;
+&lt;h3&gt;1. Document Processing&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Sample code placeholder&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;langchain.document_loaders&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TextLoader&lt;/span&gt;
+&lt;span class="n"&gt;loader&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TextLoader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;documents.txt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;documents&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;loader&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;2. Vector Store Setup&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Vector Database" src="https://tsuhina.github.io/images/about/img.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;Setting up your vector database for efficient retrieval...&lt;/p&gt;
+&lt;h2&gt;Real-World Example&lt;/h2&gt;
+&lt;div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;"&gt;
+    &lt;img src="https://tsuhina.github.io/images/about/img.jpeg" alt="Example Implementation" style="width: 100%;"&gt;
+    &lt;p style="text-align: center; margin-top: 10px; color: #666;"&gt;Example RAG implementation in production&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;RAG solutions provide powerful capabilities for building intelligent applications...&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Want to implement RAG for your organization? &lt;a href="/contact.html"&gt;Contact me&lt;/a&gt; to discuss your project.&lt;/em&gt;&lt;/p&gt;</content><category term="Machine Learning"/><category term="RAG"/><category term="LLM"/><category term="Python"/><category term="AI"/></entry></feed>
