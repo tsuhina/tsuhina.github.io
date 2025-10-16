@@ -8,3 +8,11 @@ wheels/
 
 # Virtual environments
 .venv
+.data/**/*
+.env
+
+# Pelican output
+output/
+
+# IDE specific
+.cursor/

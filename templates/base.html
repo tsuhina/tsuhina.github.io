@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+                        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+                        <nav><ul>
+                        {% for title, link in MENUITEMS %}
+                                        <li><a href="{{ link }}">{{ title }}</a></li>
+                        {% endfor %}
+                        </ul></nav>
+                </header><!-- /#banner -->
+
+                {% block content %}
+                {% endblock %}
+
+                <section id="extras" class="body">
+                </section><!-- /#extras -->
+
+                <!-- Footer removed to eliminate Pelican and Smashing Magazine attribution -->
+        </body>
+</html>

@@ -1,5 +1,5 @@
 AUTHOR = 'Tomislav Suhina'
-SITENAME = 'Tomislav Suhina - Senior decision scientist'
+SITENAME = 'Tomislav Suhina - Freelance Decision Scientist'
 SITEURL = ""
 
 PATH = "content"
@@ -15,19 +15,11 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
-)
+# Blogroll - empty to remove default links
+LINKS = ()
 
-# Social widget
-SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)
+# Social widget - empty to remove default links
+SOCIAL = ()
 
 DEFAULT_PAGINATION = 5
 
@@ -36,3 +28,30 @@ DEFAULT_PAGINATION = 5
 
 SITEURL = ''
 RELATIVE_URLS = True
+
+STATIC_PATHS = ['images', 'extra']
+
+# Template overrides for custom modifications
+THEME_TEMPLATES_OVERRIDES = ['templates']
+
+# Page configuration
+PAGE_PATHS = ['pages']
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}.html'
+
+# Article configuration
+ARTICLE_PATHS = ['articles']
+ARTICLE_SAVE_AS = 'blog/{date:%Y}/{slug}.html'
+ARTICLE_URL = 'blog/{date:%Y}/{slug}.html'
+
+# Menu items
+MENUITEMS = [
+    ('About', '/about.html'),
+    ('Services', '/services.html'),
+    ('Experience', '/experience.html'),
+    ('Projects', '/projects.html'),
+    ('Blog', '/archives.html'),
+    ('Contact', '/contact.html'),
+]
