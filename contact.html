@@ -1,45 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
-        <head>
-                        <meta charset="utf-8" />
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                        <meta name="generator" content="Pelican" />
-                        <title>Contact</title>
-                        <link rel="stylesheet" href="https://tsuhina.github.io/theme/css/main.css" />
-        </head>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Pelican" />
+    <title>Contact - Tomislav Suhina - Freelance Decision Scientist</title>
 
-        <body id="index" class="home">
-                <header id="banner" class="body">
-                        <h1><a href="https://tsuhina.github.io/">Tomislav Suhina - Freelance Decision Scientist</a></h1>
-                        <nav><ul>
-                                        <li><a href="/">About</a></li>
-                                        <li><a href="/services.html">Services</a></li>
-                                        <li><a href="/experience.html">Experience</a></li>
-                                        <li><a href="/projects.html">Projects</a></li>
-                                        <li><a href="/blog/">Blog</a></li>
-                                        <li><a href="/contact.html">Contact</a></li>
-                        </ul></nav>
-                </header><!-- /#banner -->
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="https://tsuhina.github.io/css/output.css" />
 
-  <section id="content" class="body">
-    <h1 class="entry-title">Contact</h1>
-    
-    <h1>Get In Touch</h1>
-<p><img src="https://tsuhina.github.io/images/about/img.jpeg" alt="Tomislav Suhina" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #ddd; margin-bottom: 20px;"></p>
-<p>I'm always interested in discussing new projects and consulting opportunities. As an independent data science consultant based in Amsterdam, I work with clients across Europe (any beyond) delivering solutions that create real business value. I focus on what actually works in production, from quick experiments that teach us something, to systems still running and creating impact years later.</p>
-<h2>Contact Information</h2>
-<p><strong>Email</strong>: <a href="mailto:tomislav.suhina@gmail.com">tomislav.suhina@gmail.com</a>
-<strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/tsuhina">linkedin.com/in/tsuhina</a>
-<strong>Location</strong>: Amsterdam, Netherlands</p>
-<p><em>Independent contractor registered in the Netherlands</em></p>
-<h2>Services Inquiry</h2>
-<p>Interested in IoT ML Solutions for real time analytics and predictive modeling, Logistics Optimization for supply chain and operations, RAG/LLM Applications including intelligent chatbots and knowledge retrieval systems, MLOps Implementation with end to end ML pipelines, Data Science Consulting for strategic guidance and hands on implementation, Causal Inference &amp; A/B Testing for rigorous experimentation and impact analysis, or Python Training &amp; Mentoring for best practices and team enablement?</p>
-<p>Feel free to reach out to discuss how I can help with your data science needs. I prioritize robust, proven solutions and clear communication with stakeholders at all levels.</p>
-  </section>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-                <section id="extras" class="body">
-                </section><!-- /#extras -->
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+        }
+    </style>
+</head>
 
-                <!-- Footer removed to eliminate Pelican and Smashing Magazine attribution -->
-        </body>
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+    <!-- Mobile Menu Toggle (hidden, controlled by JS) -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40" onclick="toggleMobileMenu()"></div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo/Site Name -->
+                <div class="flex-shrink-0">
+                    <a href="https://tsuhina.github.io/" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline">
+                        Tomislav Suhina
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-1">
+                    <a href="/"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        About
+                    </a>
+                    <a href="/services.html"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Services
+                    </a>
+                    <a href="/experience.html"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Experience
+                    </a>
+                    <a href="/projects.html"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Projects
+                    </a>
+                    <a href="/blog/"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Blog
+                    </a>
+                    <a href="/contact.html"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Contact
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white shadow-lg">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    About
+                </a>
+                <a href="/services.html"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Services
+                </a>
+                <a href="/experience.html"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Experience
+                </a>
+                <a href="/projects.html"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Projects
+                </a>
+                <a href="/blog/"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Blog
+                </a>
+                <a href="/contact.html"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Contact
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact</h1>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+            Let's discuss how I can help with your data science and ML projects
+        </p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <!-- Contact Info -->
+        <div>
+            <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                <div class="flex justify-center mb-8">
+                    <img src="https://tsuhina.github.io/images/about/img.jpeg"
+                         alt="Tomislav Suhina"
+                         class="w-32 h-32 rounded-full object-cover border-4 border-blue-500 shadow-lg">
+                </div>
+
+                <div class="prose prose-lg">
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        I'm always interested in discussing new projects and consulting opportunities. As an independent data science consultant based in Amsterdam, I work with clients across Europe delivering solutions that create real business value.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Email</h3>
+                            <a href="mailto:tomislav.suhina@gmail.com" class="text-blue-600 hover:text-blue-700 no-underline">
+                                tomislav.suhina@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/tsuhina" target="_blank" class="text-blue-600 hover:text-blue-700 no-underline">
+                                linkedin.com/in/tsuhina
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Location</h3>
+                            <p class="text-gray-600">Amsterdam, Netherlands</p>
+                            <p class="text-sm text-gray-500 mt-1">Independent contractor (registered in NL)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Inquiry -->
+        <div>
+            <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Services I Offer</h2>
+
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">IoT ML Solutions</h3>
+                            <p class="text-gray-600 text-sm">Real-time analytics and predictive modeling</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Logistics Optimization</h3>
+                            <p class="text-gray-600 text-sm">Supply chain and operations</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">RAG & LLM Applications</h3>
+                            <p class="text-gray-600 text-sm">Intelligent chatbots and knowledge retrieval</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">MLOps Implementation</h3>
+                            <p class="text-gray-600 text-sm">End-to-end ML pipelines and deployment</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Data Science Consulting</h3>
+                            <p class="text-gray-600 text-sm">Strategic guidance and hands-on implementation</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Python Training & Mentoring</h3>
+                            <p class="text-gray-600 text-sm">Best practices and team enablement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <p class="text-gray-700 mb-6">
+                        I prioritize robust, proven solutions and clear communication with stakeholders at all levels.
+                    </p>
+                    <a href="/services.html" class="inline-block w-full text-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold no-underline">
+                        View All Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Start a Conversation?</h2>
+        <p class="text-lg mb-8 text-blue-50 max-w-2xl mx-auto">
+            Whether you're looking for end-to-end ML solutions, strategic consulting, or technical expertise, I'm here to help.
+        </p>
+        <a href="mailto:tomislav.suhina@gmail.com" class="inline-block px-8 py-4 bg-white text-blue-700 rounded-lg hover:bg-blue-50 transition-all font-semibold text-lg shadow-lg hover:shadow-xl no-underline">
+            Send an Email
+        </a>
+    </div>
+</article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Tomislav Suhina</h3>
+                    <p class="text-gray-400">Freelance Decision Scientist specializing in ML, MLOps, and data-driven solutions.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white transition-colors no-underline">About</a></li>
+                        <li><a href="/services.html" class="text-gray-400 hover:text-white transition-colors no-underline">Services</a></li>
+                        <li><a href="/experience.html" class="text-gray-400 hover:text-white transition-colors no-underline">Experience</a></li>
+                        <li><a href="/projects.html" class="text-gray-400 hover:text-white transition-colors no-underline">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
+                    <p class="text-gray-400">Get in touch to discuss your project.</p>
+                    <a href="/contact.html" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors no-underline font-medium">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Tomislav Suhina. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            menu.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+    </script>
+</body>
 </html>

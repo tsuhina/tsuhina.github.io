@@ -1,78 +1,321 @@
 <!DOCTYPE html>
-<html lang="en">
-        <head>
-                        <meta charset="utf-8" />
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                        <meta name="generator" content="Pelican" />
-                        <title>Services</title>
-                        <link rel="stylesheet" href="https://tsuhina.github.io/theme/css/main.css" />
-        </head>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Pelican" />
+    <title>Services - Tomislav Suhina - Freelance Decision Scientist</title>
 
-        <body id="index" class="home">
-                <header id="banner" class="body">
-                        <h1><a href="https://tsuhina.github.io/">Tomislav Suhina - Freelance Decision Scientist</a></h1>
-                        <nav><ul>
-                                        <li><a href="/">About</a></li>
-                                        <li><a href="/services.html">Services</a></li>
-                                        <li><a href="/experience.html">Experience</a></li>
-                                        <li><a href="/projects.html">Projects</a></li>
-                                        <li><a href="/blog/">Blog</a></li>
-                                        <li><a href="/contact.html">Contact</a></li>
-                        </ul></nav>
-                </header><!-- /#banner -->
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="https://tsuhina.github.io/css/output.css" />
 
-  <section id="content" class="body">
-    <h1 class="entry-title">Services</h1>
-    
-    <h1>Services I Offer</h1>
-<p style="text-align: center;">
-  <img src="https://tsuhina.github.io/images/services/front-page-services.png" alt="Data Science Consulting" style="max-width: 600px; width: 100%; height: auto;">
-</p>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<p>As a freelance decision scientist with a PhD and extensive industry experience, I bring experience from learning end to end delivery by doing everything, from model architecture and MLOps to project management and stakeholder management. Some solutions I built are highly impactful and used to this day. I've been brought back as contractor for various improvements on original projects, which makes me proud and humbled. I've also led teams and served as technical lead on high impact initiatives.</p>
-<h2>IoT ML Solutions</h2>
-<p>Batch analytics and predictive modeling for IoT systems. Built equipment monitoring solutions at Heineken using batch processing and machine learning, currently delivering IoT frameworks. I work with batch anomaly detection and monitoring using Python and Pandas, handle sensor data processing and feature engineering, build predictive maintenance models with Scikit learn and XGBoost, and deploy to production with drift detection using Evidently and MLFlow.</p>
-<p><strong>Technologies</strong>: Python, Pandas, Scikit learn, XGBoost, MLFlow, Evidently</p>
-<h2>Logistics Optimization</h2>
-<p>Supply chain and operations optimization using machine learning. Delivered demand forecasting and cost benefit simulation at Heineken using PyMC and Scikit learn. I handle demand forecasting with PyMC, Prophet, Scikit learn, DARTS, and Nixtla, work on route optimization and resource allocation, build cost benefit simulation and scenario analysis tools, and support raw material planning.</p>
-<p><strong>Technologies</strong>: Python, PyMC, Scikit learn, Pandas, Polars, Networkx</p>
-<h2>Data Engineering &amp; Big Data</h2>
-<p>Large scale data processing and distributed computing. I work with distributed data processing using PySpark on Databricks and self managed clusters, set up data warehousing and analytics with AWS Redshift and Azure Synapse, manage cloud data lakes and storage on AWS S3 and Azure Data Lake, use query engines like AWS Athena and Azure Synapse Analytics, and build ETL pipelines and orchestration with Azure ADF, Databricks workflows, GitHub Actions, and Azure DevOps.</p>
-<p><strong>Technologies</strong>: PySpark, Databricks, AWS (S3, Athena, Redshift), Azure (ADF, Synapse, Data Lake), GitHub Actions, Azure DevOps, Pandas, Polars</p>
-<h2>Entity Deduplication &amp; Record Linkage</h2>
-<p>Cleaning up duplicate records that accumulate when data comes from multiple systems. I build deduplication solutions using fuzzy matching, phonetic algorithms, and machine learning for probabilistic record matching. Work covers customer master data, product catalogs, and cross-system integration where the same entity appears differently across sources. These solutions process at scale, handling millions of records efficiently.</p>
-<p><strong>Technologies</strong>: Python, Pandas, Polars, PySpark, RecordLinkage, Dedupe, Fuzzy matching libraries, Entity resolution</p>
-<h2>RAG &amp; LLM Applications</h2>
-<p>Building intelligent applications using Retrieval Augmented Generation and Large Language Models. Delivered RAG based knowledge retrieval system at Rabobank (deployed to production). I build knowledge base Q&amp;A systems and chatbots, implement information retrieval and semantic search, handle document analysis and processing, and create LLM optimization and evaluation frameworks.</p>
-<p><strong>Technologies</strong>: LangChain, OpenAI, HuggingFace, ChromaDB, FAISS</p>
-<h2>Machine Learning Solutions</h2>
-<p>Custom ML models for business critical applications. Built retention modeling at Rabobank using XGBoost, financial forecasting at Heineken with Prophet and PyMC (used to this day). I develop customer retention and churn models with XGBoost and Catboost, build classification and regression solutions using Scikit learn, XGBoost, and Catboost, handle time series forecasting with Prophet, PyMC, Scikit learn, DARTS, and Nixtla, and work on causal inference and A/B testing using PyMC and CausalNex.</p>
-<p><strong>Technologies</strong>: Python, XGBoost, Catboost, Scikit learn, PyTorch, PyMC, Prophet, CausalNex</p>
-<h2>Marketing Analytics &amp; Media Mix Modeling</h2>
-<p>Strategic marketing optimization and measurement solutions. Led one of Heineken's most successful analytics projects, Media Mix Modeling that captured significant business value at tens of millions scale in the first year, still actively used for strategic decisions. I specialize in MMM model creation and implementation using Bayesian approaches, marketing attribution and channel effectiveness analysis, ROI measurement and comprehensive reporting, budget optimization recommendations, execution strategy development, and ongoing model maintenance and refinement.</p>
-<p><strong>Services Offered</strong>:
-- MMM model development and implementation (Bayesian modeling)
-- Marketing attribution and channel effectiveness analysis
-- ROI measurement and reporting
-- Budget optimization recommendations
-- Execution strategy development
-- Ongoing model maintenance and updates</p>
-<p><strong>Technologies</strong>: Python, PyMC, Bayesian Modeling, Causal Inference, Marketing Analytics, Statistical Modeling</p>
-<h2>MLOps Implementation</h2>
-<p>End to end MLOps pipelines for reliable model deployment and maintenance. Built deployment blueprints at Rabobank using Databricks, Docker and MLFlow, established practices at Heineken using Azure ecosystem. I set up CI/CD pipelines with GitHub Actions, Azure DevOps, and Databricks Asset Bundles, implement model monitoring and drift detection using Evidently and custom solutions, handle data quality validation with Great Expectations and Evidently, manage model tracking and reproducibility through MLFlow, work with containerization and orchestration using Docker and Kubernetes, and deploy across cloud platforms including AWS (ECR, SageMaker, S3, Athena, Redshift) and Azure (Container Registry, Azure ML, ADF, Synapse, Databricks).</p>
-<p><strong>Technologies</strong>: Docker, Kubernetes, MLFlow, GitHub Actions, Azure DevOps, Databricks Asset Bundles, Great Expectations, Evidently, Azure (ADF, Synapse, Databricks, Azure ML), AWS (S3, ECR, SageMaker)</p>
-<h2>Data Science Consulting &amp; Collaboration</h2>
-<p>Strategic guidance and hands on implementation. I help with data strategy and use case identification, collaborate with cross functional teams, handle stakeholder communication and business alignment, provide technical mentoring and best practices, and deliver workshops and training for both technical and business audiences.</p>
-<h2>Python Training &amp; Mentoring</h2>
-<p>Workshops and mentoring on Python best practices, data science, and ML engineering. I teach software engineering best practices for data scientists, cover unit/integration testing and code quality, introduce the Python ecosystem and modern tooling, and focus on team enablement and knowledge transfer.</p>
-<p><strong>Philosophy</strong>: "Simple is better than complex, and complex is better than complicated", the zen of Python guides all my work.</p>
-<p>I've built projects from scratch (wearing all the technical and non technical hats), led teams on high impact initiatives, and served as technical lead. Some solutions I built are highly impactful and used to this day. I've been brought back as contractor to work on improvements for them. Whether you need someone to build from scratch, lead a complex delivery, or bridge technical and business needs, I bring that range of experience.</p>
-<p><a href="/contact.html">Contact me</a> to discuss your project.</p>
-  </section>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+        }
+    </style>
+</head>
 
-                <section id="extras" class="body">
-                </section><!-- /#extras -->
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+    <!-- Mobile Menu Toggle (hidden, controlled by JS) -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40" onclick="toggleMobileMenu()"></div>
 
-                <!-- Footer removed to eliminate Pelican and Smashing Magazine attribution -->
-        </body>
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo/Site Name -->
+                <div class="flex-shrink-0">
+                    <a href="https://tsuhina.github.io/" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline">
+                        Tomislav Suhina
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-1">
+                    <a href="/"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        About
+                    </a>
+                    <a href="/services.html"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Services
+                    </a>
+                    <a href="/experience.html"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Experience
+                    </a>
+                    <a href="/projects.html"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Projects
+                    </a>
+                    <a href="/blog/"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Blog
+                    </a>
+                    <a href="/contact.html"
+                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                        Contact
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white shadow-lg">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    About
+                </a>
+                <a href="/services.html"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Services
+                </a>
+                <a href="/experience.html"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Experience
+                </a>
+                <a href="/projects.html"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Projects
+                </a>
+                <a href="/blog/"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Blog
+                </a>
+                <a href="/contact.html"
+                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                    Contact
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Services</h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+            End-to-end ML solutions from architecture to deployment, backed by 7+ years of experience
+        </p>
+    </div>
+</section>
+
+<!-- Services Content -->
+<article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Intro Text -->
+    <div class="prose prose-lg max-w-4xl mx-auto mb-16 text-center">
+        <p class="text-xl text-gray-700 leading-relaxed">
+            As a freelance decision scientist with a PhD and extensive industry experience, I bring experience from learning end to end delivery by doing everything, from model architecture and MLOps to project management and stakeholder management.
+        </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- IoT ML Solutions -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-blue-200">
+            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">IoT ML Solutions</h3>
+            <p class="text-gray-600 mb-6">Batch analytics and predictive modeling for IoT systems. Built equipment monitoring solutions at Heineken using batch processing and machine learning.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Python, Pandas, Scikit-learn, XGBoost, MLFlow, Evidently
+            </div>
+        </div>
+
+        <!-- Logistics Optimization -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-purple-200">
+            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Logistics Optimization</h3>
+            <p class="text-gray-600 mb-6">Supply chain and operations optimization using machine learning. Delivered demand forecasting and cost-benefit simulation at Heineken.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Python, PyMC, Scikit-learn, Pandas, Polars, NetworkX
+            </div>
+        </div>
+
+        <!-- Data Engineering & Big Data -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-teal-200">
+            <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Data Engineering & Big Data</h3>
+            <p class="text-gray-600 mb-6">Large-scale data processing and distributed computing. Work with PySpark, cloud data lakes, and ETL pipelines.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                PySpark, Databricks, AWS, Azure, GitHub Actions
+            </div>
+        </div>
+
+        <!-- Entity Deduplication -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-blue-200">
+            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Entity Deduplication</h3>
+            <p class="text-gray-600 mb-6">Cleaning up duplicate records using fuzzy matching, phonetic algorithms, and ML for probabilistic record matching at scale.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Python, Pandas, Polars, PySpark, RecordLinkage, Dedupe
+            </div>
+        </div>
+
+        <!-- RAG & LLM Applications -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-purple-200">
+            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">RAG & LLM Applications</h3>
+            <p class="text-gray-600 mb-6">Building intelligent applications using Retrieval Augmented Generation. Delivered RAG-based knowledge retrieval system at Rabobank (production).</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                LangChain, OpenAI, HuggingFace, ChromaDB, FAISS
+            </div>
+        </div>
+
+        <!-- Machine Learning Solutions -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-teal-200">
+            <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Machine Learning Solutions</h3>
+            <p class="text-gray-600 mb-6">Custom ML models for business-critical applications. Built retention modeling at Rabobank, financial forecasting at Heineken (still used today).</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                XGBoost, CatBoost, Scikit-learn, PyTorch, PyMC, Prophet
+            </div>
+        </div>
+
+        <!-- Marketing Analytics & MMM -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-blue-200">
+            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Marketing Analytics & MMM</h3>
+            <p class="text-gray-600 mb-6">Led Heineken's most successful analytics project. Media Mix Modeling that captured tens of millions in value, still actively used for strategic decisions.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Python, PyMC, Bayesian Modeling, Causal Inference
+            </div>
+        </div>
+
+        <!-- MLOps Implementation -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-purple-200">
+            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">MLOps Implementation</h3>
+            <p class="text-gray-600 mb-6">End-to-end MLOps pipelines for reliable model deployment. Built deployment blueprints at Rabobank using Databricks, Docker, and MLFlow.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Docker, Kubernetes, MLFlow, GitHub Actions, Databricks
+            </div>
+        </div>
+
+        <!-- Data Science Consulting -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-teal-200">
+            <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Consulting & Training</h3>
+            <p class="text-gray-600 mb-6">Strategic guidance, hands-on implementation, stakeholder communication, and Python training with focus on best practices.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Focus areas:</strong>
+                Data strategy, team enablement, ML engineering best practices
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Build Something Great</h2>
+        <p class="text-lg mb-8 text-blue-50 max-w-2xl mx-auto">
+            Whether you need someone to build from scratch, lead a complex delivery, or bridge technical and business needs, I bring the full range of experience.
+        </p>
+        <a href="/contact.html" class="inline-block px-8 py-4 bg-white text-blue-700 rounded-lg hover:bg-blue-50 transition-all font-semibold text-lg shadow-lg hover:shadow-xl no-underline">
+            Get In Touch
+        </a>
+    </div>
+</article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Tomislav Suhina</h3>
+                    <p class="text-gray-400">Freelance Decision Scientist specializing in ML, MLOps, and data-driven solutions.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white transition-colors no-underline">About</a></li>
+                        <li><a href="/services.html" class="text-gray-400 hover:text-white transition-colors no-underline">Services</a></li>
+                        <li><a href="/experience.html" class="text-gray-400 hover:text-white transition-colors no-underline">Experience</a></li>
+                        <li><a href="/projects.html" class="text-gray-400 hover:text-white transition-colors no-underline">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
+                    <p class="text-gray-400">Get in touch to discuss your project.</p>
+                    <a href="/contact.html" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors no-underline font-medium">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Tomislav Suhina. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            menu.classList.toggle('hidden');
+            overlay.classList.toggle('hidden');
+        }
+    </script>
+</body>
 </html>
