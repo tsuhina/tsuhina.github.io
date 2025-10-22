@@ -16,3 +16,9 @@ output/
 
 # IDE specific
 .cursor/
+
+# Node modules and npm
+node_modules/
+
+# Generated CSS
+content/css/output.css

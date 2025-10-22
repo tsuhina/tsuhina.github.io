@@ -2,6 +2,7 @@ Title: About Me
 Slug: about
 save_as: index.html
 url: index.html
+Template: about
 
 <img src="{static}/images/about/cv_photo_full.JPG" alt="Tomislav Suhina" style="float: left; margin: 0 20px 20px 0; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #ddd;">
 Hi, I'm Tomislav Suhina, PhD, a results oriented data professional who learned by doing everything. Over 7+ years in industry and 5 in academia, I've gone from experimenting in a startup minded analytics department to leading teams and building solutions that are still running years later. Based in Amsterdam, I bring experience from both industry and academia across finance, commerce, supply chain, IoT, and logistics.

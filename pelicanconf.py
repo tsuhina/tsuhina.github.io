@@ -29,7 +29,15 @@ DEFAULT_PAGINATION = 5
 SITEURL = ''
 RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'extra']
+STATIC_PATHS = ['images', 'extra', 'css']
+
+# Extra path metadata for CSS files (only copy output.css, not input.css)
+EXTRA_PATH_METADATA = {
+    'css/output.css': {'path': 'css/output.css'},
+}
+
+# Ignore input.css in static paths
+IGNORE_FILES = ['.#*', 'input.css']
 
 # Template overrides for custom modifications
 THEME_TEMPLATES_OVERRIDES = ['templates']

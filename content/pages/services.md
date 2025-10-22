@@ -1,5 +1,6 @@
 Title: Services
 Slug: services
+Template: services
 
 # Services I Offer
 

@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ page.title }}</h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+            End-to-end ML solutions from architecture to deployment, backed by 7+ years of experience
+        </p>
+    </div>
+</section>
+
+<!-- Services Content -->
+<article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Intro Text -->
+    <div class="prose prose-lg max-w-4xl mx-auto mb-16 text-center">
+        <p class="text-xl text-gray-700 leading-relaxed">
+            As a freelance decision scientist with a PhD and extensive industry experience, I bring experience from learning end to end delivery by doing everything, from model architecture and MLOps to project management and stakeholder management.
+        </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- IoT ML Solutions -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-blue-200">
+            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">IoT ML Solutions</h3>
+            <p class="text-gray-600 mb-6">Batch analytics and predictive modeling for IoT systems. Built equipment monitoring solutions at Heineken using batch processing and machine learning.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Python, Pandas, Scikit-learn, XGBoost, MLFlow, Evidently
+            </div>
+        </div>
+
+        <!-- Logistics Optimization -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-purple-200">
+            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Logistics Optimization</h3>
+            <p class="text-gray-600 mb-6">Supply chain and operations optimization using machine learning. Delivered demand forecasting and cost-benefit simulation at Heineken.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Python, PyMC, Scikit-learn, Pandas, Polars, NetworkX
+            </div>
+        </div>
+
+        <!-- Data Engineering & Big Data -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-teal-200">
+            <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Data Engineering & Big Data</h3>
+            <p class="text-gray-600 mb-6">Large-scale data processing and distributed computing. Work with PySpark, cloud data lakes, and ETL pipelines.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                PySpark, Databricks, AWS, Azure, GitHub Actions
+            </div>
+        </div>
+
+        <!-- Entity Deduplication -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-blue-200">
+            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Entity Deduplication</h3>
+            <p class="text-gray-600 mb-6">Cleaning up duplicate records using fuzzy matching, phonetic algorithms, and ML for probabilistic record matching at scale.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Python, Pandas, Polars, PySpark, RecordLinkage, Dedupe
+            </div>
+        </div>
+
+        <!-- RAG & LLM Applications -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-purple-200">
+            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">RAG & LLM Applications</h3>
+            <p class="text-gray-600 mb-6">Building intelligent applications using Retrieval Augmented Generation. Delivered RAG-based knowledge retrieval system at Rabobank (production).</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                LangChain, OpenAI, HuggingFace, ChromaDB, FAISS
+            </div>
+        </div>
+
+        <!-- Machine Learning Solutions -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-teal-200">
+            <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Machine Learning Solutions</h3>
+            <p class="text-gray-600 mb-6">Custom ML models for business-critical applications. Built retention modeling at Rabobank, financial forecasting at Heineken (still used today).</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                XGBoost, CatBoost, Scikit-learn, PyTorch, PyMC, Prophet
+            </div>
+        </div>
+
+        <!-- Marketing Analytics & MMM -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-blue-200">
+            <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Marketing Analytics & MMM</h3>
+            <p class="text-gray-600 mb-6">Led Heineken's most successful analytics project. Media Mix Modeling that captured tens of millions in value, still actively used for strategic decisions.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Python, PyMC, Bayesian Modeling, Causal Inference
+            </div>
+        </div>
+
+        <!-- MLOps Implementation -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-purple-200">
+            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">MLOps Implementation</h3>
+            <p class="text-gray-600 mb-6">End-to-end MLOps pipelines for reliable model deployment. Built deployment blueprints at Rabobank using Databricks, Docker, and MLFlow.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Technologies:</strong>
+                Docker, Kubernetes, MLFlow, GitHub Actions, Databricks
+            </div>
+        </div>
+
+        <!-- Data Science Consulting -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border border-gray-100 hover:border-teal-200">
+            <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Consulting & Training</h3>
+            <p class="text-gray-600 mb-6">Strategic guidance, hands-on implementation, stakeholder communication, and Python training with focus on best practices.</p>
+            <div class="text-sm text-gray-500">
+                <strong class="block mb-2 text-gray-700">Focus areas:</strong>
+                Data strategy, team enablement, ML engineering best practices
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Build Something Great</h2>
+        <p class="text-lg mb-8 text-blue-50 max-w-2xl mx-auto">
+            Whether you need someone to build from scratch, lead a complex delivery, or bridge technical and business needs, I bring the full range of experience.
+        </p>
+        <a href="/contact.html" class="inline-block px-8 py-4 bg-white text-blue-700 rounded-lg hover:bg-blue-50 transition-all font-semibold text-lg shadow-lg hover:shadow-xl no-underline">
+            Get In Touch
+        </a>
+    </div>
+</article>
+{% endblock %}

@@ -3,21 +3,24 @@ Slug: experience
 
 # Professional Experience
 
-<img src="{static}/images/about/img.jpeg" alt="Skills" style="float: right; margin: 0 0 20px 20px; max-width: 130px;">
+## Freelance Decision Scientist (ZZP)
+**Independent Consultant** | April 2023 to Present
 
-## Freelance Decision Science Consultant
-**Heineken** | April 2025 to Present
+Independent data science consultant (registered ZZP) serving diverse clients from startups to Fortune 500 companies. Specializing in production ML systems, MLOps, and end-to-end solution delivery across multiple industries.
 
-Delivering ML projects in IoT domain and logistics optimization, building effective frameworks and scalable code solutions, and implementing end to end ML pipelines with focus on production deployment.
+**Selected Client Engagements:**
 
-## Freelance Decision Science Consultant (ZZP)
-**Rabobank** | April 2023 to April 2025
+### Heineken
+Building production ML frameworks for IoT and logistics optimization:
+- End-to-end ML pipelines for equipment monitoring and predictive analytics
+- Logistics optimization solutions with scalable architecture
+- Production deployment with monitoring and maintenance frameworks
 
-Contributed as senior data scientist to team focused on advanced analytics in business lending. Handled stakeholder communication, conducted experiments, and developed ML deployment blueprints covering CI/CD, drift detection, data quality, and model monitoring.
-
-**Internal Knowledge Retrieval System**: Developed, optimized and evaluated RAG based system for information retrieval from knowledge bases supporting business decisions. Delivered successful PoC, solution deployed to production.
-
-**Customer Retention Modeling**: Created, optimized and tuned predictive model with comprehensive A/B testing framework. Delivered successful PoC, solution deployed to production.
+### Rabobank
+Delivered production ML systems for business lending analytics:
+- **RAG Knowledge Retrieval System**: Information retrieval solution supporting business decisions, deployed to production
+- **Customer Retention Model**: Predictive modeling with A/B testing framework, validated and deployed to production
+- **MLOps Blueprint**: Comprehensive deployment framework (CI/CD, drift detection, data quality, monitoring)
 
 ## Lead Data Scientist Global Commerce & Finance
 **Heineken** | August 2022 to March 2023
@@ -71,39 +74,55 @@ Research focus: Fundamental understanding of molecular motion under confined con
 **University of Zagreb, Croatia** | 2007 to 2010 | *cum laude*
 
 
-## Skills & Expertise
 
-<img src="{static}/images/experience/skills.png" alt="Skills Chart" style="max-width: 200px;">
+## Technology Stack
 
-### Languages
-Python, SQL, bash/unix scripting
+### Programming Languages
+Python • SQL • Bash/Unix scripting
 
-### LLM & Information Retrieval
-OpenAI, HuggingFace, LangChain, ChromaDB, FAISS
+### Machine Learning & AI Frameworks
+- **Classical ML**: Scikit-learn, XGBoost, CatBoost, SparkML
+- **Deep Learning**: PyTorch, PyTorch Lightning, fastai
+- **LLM & RAG**: OpenAI, HuggingFace, LangChain, LangGraph, LlamaIndex, ChromaDB, FAISS
+- **Time Series**: Prophet, PyMC, DARTS, Nixtla, Stumpy, Ruptures
+- **Causal Inference**: PyMC, CausalNex, NetworkX
+- **Explainability**: SHAP, LIME, ELI5
 
 ### Data Engineering
-Pandas, PySpark, Databricks, Polars
+Pandas • Polars • PySpark • Databricks
 
-### Machine Learning
-Scikit-learn, XGBoost, Catboost, SparkML
+### Cloud Infrastructure
+- **Azure**: ADF, Synapse, Databricks, Azure ML
+- **AWS**: S3, Athena, Redshift, ECR, SageMaker
 
-### Time Series Forecasting
-Prophet, PyMC, DARTS, Nixtla, Scikit-learn
+### MLOps & DevOps
+- **Experiment Tracking**: MLFlow
+- **Deployment & Orchestration**: Docker, Kubernetes, Databricks Asset Bundles
+- **CI/CD**: GitHub Actions, Azure DevOps
+- **Quality & Monitoring**: Great Expectations, Evidently
+- **Development**: Git, Unit Testing, Integration Testing
 
-### Causal Inference
-PyMC, CausalNex, Networkx
+### Development Tools
+FastAPI • Flask • Streamlit • Bokeh • Panel
 
-### Model Explainability
-SHAP, LIME, ELI5
 
-### Deep Learning
-PyTorch, fastai
 
-### API Development
-FastAPI, Flask
+## Domain Expertise
 
-### MLOps & Engineering
-Model tracking with MLFlow, containerization using Docker, version control with Git, CI/CD through GitHub Actions and Azure DevOps, data quality using Great Expectations and Evidently, cloud platforms including Azure (ADF, Synapse, Databricks, Azure ML) and AWS (S3, Athena, Redshift, ECR, SageMaker), unit and integration testing, and environment management with virtual environments and Bash.
+### Core Machine Learning
+Regression • Classification • Clustering • Feature Engineering • Model Selection
 
-### Frontend
-Bokeh, Streamlit, Panel
+### Time Series & Forecasting
+Univariate & Multivariate Forecasting • Seasonality Modeling • Trend Analysis • Forecast Evaluation
+
+### Pattern Recognition & Anomaly Detection
+Motif Discovery • Change Point Detection • Outlier Detection • Real-time Anomaly Detection
+
+### Causal Inference & Experimentation
+Causal Analysis • A/B Testing • Treatment Effect Estimation • Counterfactual Reasoning • Experimental Design
+
+### Specialized Applications
+- **Media Mix Modeling**: Marketing Attribution, Channel Optimization, ROI Measurement
+- **IoT Analytics**: Sensor Data Processing, Predictive Maintenance, Equipment Monitoring
+- **Entity Deduplication**: Fuzzy Matching, Record Linkage, Master Data Management
+- **LLM Applications**: RAG Systems, Knowledge Retrieval, Semantic Search

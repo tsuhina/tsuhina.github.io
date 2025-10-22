@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold">{{ page.title }}</h1>
+    </div>
+</section>
+
+<!-- Main Content -->
+<article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 prose prose-lg max-w-none">
+        {{ page.content }}
+    </div>
+</article>
+{% endblock %}

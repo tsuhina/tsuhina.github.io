@@ -1,0 +1,27 @@
+{
+  "name": "personal_webpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./content/css/input.css -o ./content/css/output.css --minify",
+    "dev": "tailwindcss -i ./content/css/input.css -o ./content/css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuhina/tsuhina.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tsuhina/tsuhina.github.io/issues"
+  },
+  "homepage": "https://github.com/tsuhina/tsuhina.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.15",
+    "tailwindcss": "^4.1.15"
+  }
+}

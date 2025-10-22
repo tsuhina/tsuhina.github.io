@@ -1,5 +1,6 @@
 Title: Contact
 Slug: contact
+Template: contact
 
 # Get In Touch
 
