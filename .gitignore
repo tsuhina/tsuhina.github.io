@@ -17,6 +17,9 @@ output/
 # IDE specific
 .cursor/
 
+# macOS specific
+.DS_Store
+
 # Node modules and npm
 node_modules/
 

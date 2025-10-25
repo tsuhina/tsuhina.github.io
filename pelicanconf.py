@@ -32,8 +32,10 @@ RELATIVE_URLS = True
 STATIC_PATHS = ['images', 'extra', 'css']
 
 # Extra path metadata for CSS files (only copy output.css, not input.css)
+# and CNAME for custom domain
 EXTRA_PATH_METADATA = {
     'css/output.css': {'path': 'css/output.css'},
+    'extra/CNAME': {'path': 'CNAME'},
 }
 
 # Ignore input.css in static paths
