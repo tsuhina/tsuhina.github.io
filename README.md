@@ -62,29 +62,24 @@ npm run build
 
 ## 🚀 Deployment
 
-### 🌐 Deploy to GitHub Pages
+### 🌐 Automated Deployment via GitHub Actions
+
+Deployment is fully automated! Simply push to main:
 
 ```bash
-# One-command deployment
-make github
+git push origin main
 ```
 
-This automated process:
-1. ✅ Compiles Tailwind CSS with minification
-2. ✅ Builds the site with production settings
-3. ✅ Pushes to the `gh-pages` branch
-4. ✅ Triggers GitHub Pages deployment
+**What happens automatically:**
+1. ✅ GitHub Actions workflow triggers
+2. ✅ Compiles Tailwind CSS with minification
+3. ✅ Builds the site with production settings
+4. ✅ Deploys to `gh-pages` branch
+5. ✅ Site goes live at https://ts-analytics.eu
 
-### 🔧 Manual Deployment
-
-```bash
-# Build production version
-make publish
-
-# Deploy manually
-ghp-import -m "Deploy site" -b gh-pages output --no-jekyll
-git push origin gh-pages
-```
+**Monitor deployment:**
+- View Actions: `https://github.com/tsuhina/tsuhina.github.io/actions`
+- Typical deployment time: 1-2 minutes
 
 ## 📁 Project Structure
 
