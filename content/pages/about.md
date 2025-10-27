@@ -11,7 +11,7 @@ My journey started in academic research. I earned my PhD in Physical Chemistry f
 
 I'm passionate about learning and delivering real world solutions that actually work. I prioritize robust approaches over fleeting trends and believe in clear communication with stakeholders. I believe that "simple is better than complex, and complex is better than complicated".
 
-What I'm proud of: I've built projects from scratch (doing everything from model architecture to stakeholder management), led a 15+ person team on one of Heineken's most successful analytics projects with massive business impact, and been brought back as contractor to improve solutions I originally built. That full circle moment still makes me proud and humbled.
+What I'm proud of: I've built projects from scratch (doing everything from model architecture to stakeholder management), led a 15+ person team and served as technical lead on one of Heineken's most successful analytics projects with massive business impact, and been brought back as contractor to improve solutions I originally built. That full circle moment still makes me proud and humbled.
 
 My technical expertise includes data extraction, data validation, model & data drift detection, machine learning, deep learning, LLM agents & RAG solutions, information retrieval, model tracking/monitoring/reproducibility, mapping solutions to business KPIs, A/B testing, software engineering, and the establishment of data pipelines. I have solid understanding of MLOps best practices and experience ranging from quick experiments to mission critical production systems.
 

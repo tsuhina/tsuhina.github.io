@@ -57,7 +57,7 @@ Delivered successful PoC validated through pilot experiment.
 
 **Technologies**: Python, Bayesian Modeling, Causal Inference, Marketing Analytics
 
-Led interdisciplinary team of 15+ direct reports (6 data scientists, 2 front end engineers, 2 data engineers, 3 MLOps engineers, and others) to deliver advanced Bayesian modeling solution for marketing optimization.
+Managed interdisciplinary team of 15+ direct reports (6 data scientists, 2 front end engineers, 2 data engineers, 3 MLOps engineers, and others) and served as technical lead to deliver advanced Bayesian modeling solution for marketing optimization.
 
 **Impact**: One of Heineken's most successful analytics projects, **captured significant business value at tens of millions scale in the first year**. Still actively used for strategic marketing decisions.
 

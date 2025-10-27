@@ -50,7 +50,7 @@ Custom ML models for business critical applications. Built retention modeling at
 
 
 ## Marketing Analytics & Media Mix Modeling
-Strategic marketing optimization and measurement solutions. Led one of Heineken's most successful analytics projects, Media Mix Modeling that captured significant business value at tens of millions scale in the first year, still actively used for strategic decisions. I specialize in MMM model creation and implementation using Bayesian approaches, marketing attribution and channel effectiveness analysis, ROI measurement and comprehensive reporting, budget optimization recommendations, execution strategy development, and ongoing model maintenance and refinement.
+Strategic marketing optimization and measurement solutions. Served as technical lead on one of Heineken's most successful analytics projects, Media Mix Modeling that captured significant business value at tens of millions scale in the first year, still actively used for strategic decisions. I specialize in MMM model creation and implementation using Bayesian approaches, marketing attribution and channel effectiveness analysis, ROI measurement and comprehensive reporting, budget optimization recommendations, execution strategy development, and ongoing model maintenance and refinement.
 
 **Services Offered**:
 - MMM model development and implementation (Bayesian modeling)
