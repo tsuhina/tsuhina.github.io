@@ -59,7 +59,7 @@ Delivered successful PoC validated through pilot experiment.
 
 Managed interdisciplinary team of 15+ direct reports (6 data scientists, 2 front end engineers, 2 data engineers, 3 MLOps engineers, and others) and served as technical lead to deliver advanced Bayesian modeling solution for marketing optimization.
 
-**Impact**: One of Heineken's most successful analytics projects, **captured significant business value at tens of millions scale in the first year**. Still actively used for strategic marketing decisions.
+> **Impact** — One of Heineken's most successful analytics projects, **captured significant business value at tens of millions scale in the first year**. Still actively used for strategic marketing decisions.
 
 
 ## Financial KPI Forecasting & Time Series Best Practices
@@ -73,7 +73,7 @@ Managed interdisciplinary team of 15+ direct reports (6 data scientists, 2 front
 
 Built from scratch with full end to end ownership: model architecture, development, MLOps, data engineering, project management, stakeholder management. Served as technical lead. Not just a forecasting system, but **established time series best practices that became the foundation for the organization's approach**.
 
-**Impact**: Team later took ownership and evolved it. **Used to this day for global financial planning**.
+> **Impact** — Team later took ownership and evolved it. **Used to this day for global financial planning**.
 
 
 ## Equipment Spare Parts Allocation
@@ -87,9 +87,9 @@ Built from scratch with full end to end ownership: model architecture, developme
 
 Initiated and built with full end to end ownership: model architecture, development, MLOps, data engineering, project management, stakeholder management. Served as technical lead working with less senior colleagues.
 
-**Impact**: Became a driving force for operational improvements **across global operations with massive opportunity**. Still live and used daily across the organization.
+> **Impact** — Became a driving force for operational improvements **across global operations with massive opportunity**. Still live and used daily across the organization.
 
-**Full circle moment**: Later returned as independent contractor for various improvements, proud and humbled to continue this work.
+> **Full circle moment** — Later returned as independent contractor for various improvements, proud and humbled to continue this work.
 
 
 ## Learning Through Variety

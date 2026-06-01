@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} — {{ SITENAME }}{% endblock %}
+{% block og_title %}{{ article.title }} — {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="border-b border-line">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-16 md:py-20">
+        <p class="font-mono text-xs uppercase tracking-widest text-accent mb-5">
+            <a href="/blog/" class="no-underline hover:text-accent-dark">Blog</a> ·
+            <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+            {% if article.category %} · {{ article.category }}{% endif %}
+        </p>
+        <h1 class="display text-3xl md:text-5xl">{{ article.title }}</h1>
+        {% if article.tags %}
+        <div class="mt-7">
+            {% for tag in article.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Body -->
+<article class="max-w-3xl mx-auto px-5 sm:px-8 py-12 md:py-16">
+    <div class="prose max-w-none">
+        {{ article.content }}
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-line">
+        <a href="/blog/" class="link-arrow no-underline">&larr; Back to all posts</a>
+    </div>
+</article>
+{% endblock %}

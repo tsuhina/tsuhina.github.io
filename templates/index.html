@@ -1,52 +1,51 @@
 {% extends "base.html" %}
-{% block content_title %}{% endblock %}
+
+{% block title %}Blog — {{ SITENAME }}{% endblock %}
+{% block og_title %}Blog — {{ SITENAME }}{% endblock %}
+
 {% block content %}
-    {% if articles %}
-        {% for article in articles_page.object_list %}
+<!-- Header -->
+<section class="border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-24">
+        <p class="eyebrow mb-6">Writing</p>
+        <h1 class="display text-4xl md:text-6xl mb-6">Notes on data science in practice.</h1>
+        <p class="text-lg text-muted max-w-2xl leading-relaxed">Occasional writing on production ML, MLOps and the craft of delivering analytics that actually works.</p>
+    </div>
+</section>
 
-        {# First item #}
-            {% if loop.first and not articles_page.has_previous() %}
-                <aside id="featured" class="body">
-                    <article>
-                        <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-                        {% include 'article_infos.html' %}{{ article.content }}{% include 'comments.html' %}
-                    </article>
-                </aside><!-- /#featured -->
-                {% if loop.length > 1 %}
-                    <section id="content" class="body">
-                        <h1>Other articles</h1>
-                        <hr />
-                        <ol id="posts-list" class="hfeed">
-                {% endif %}
-        {# other items #}
-            {% else %}
-                {% if loop.first %}
-                    <section id="content" class="body">
-                        <ol id="posts-list" class="hfeed" start="{{ articles_paginator.per_page -1 }}">
-                {% endif %}
-                <li><article class="hentry">
-                    <header>
-                        <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                               title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-                    </header>
+<!-- Post list -->
+<section>
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-16">
+        {% if articles %}
+        <div class="border-t border-line">
+            {% for article in articles_page.object_list %}
+            <article class="py-10 border-b border-line">
+                <p class="font-mono text-xs uppercase tracking-widest text-accent mb-4">
+                    <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+                    {% if article.category %} · {{ article.category }}{% endif %}
+                </p>
+                <h2 class="font-display text-2xl md:text-3xl text-ink mb-4 leading-tight">
+                    <a href="{{ SITEURL }}/{{ article.url }}" class="hover:text-accent no-underline">{{ article.title }}</a>
+                </h2>
+                <div class="text-muted leading-relaxed mb-5 prose max-w-none">{{ article.summary }}</div>
+                <a href="{{ SITEURL }}/{{ article.url }}" class="link-arrow no-underline">Read more</a>
+            </article>
+            {% endfor %}
+        </div>
 
-                    <div class="entry-content">
-                        {% include 'article_infos.html' %}
-                        {{ article.summary }}
-                        <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
-                        {% include 'comments.html' %}
-                    </div><!-- /.entry-content -->
-                </article></li>
-            {% endif %}
-            {% if loop.last %}
-                {% if loop.length > 1 or articles_page.has_other_pages() %}
-                    </ol><!-- /#posts-list -->
-                    {% if articles_page.has_other_pages() %}
-                        {% include 'pagination.html' %}
-                    {% endif %}
-                    </section><!-- /#content -->
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-{% endblock content %}
+        {% if articles_page.has_other_pages() %}
+            <nav class="flex justify-between items-center mt-12 font-mono text-sm">
+                {% if articles_page.has_previous() %}
+                    <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="link-arrow no-underline">&larr; Newer</a>
+                {% else %}<span></span>{% endif %}
+                {% if articles_page.has_next() %}
+                    <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="link-arrow no-underline">Older &rarr;</a>
+                {% else %}<span></span>{% endif %}
+            </nav>
+        {% endif %}
+        {% else %}
+        <p class="text-muted py-16 text-center">No posts yet — check back soon.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

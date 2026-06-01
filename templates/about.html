@@ -1,95 +1,174 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+{% block title %}{{ SITENAME }}{% endblock %}
+{% block og_title %}{{ SITENAME }}{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <!-- Text Content -->
-            <div class="order-2 md:order-1">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    {{ SITENAME.split(' - ')[0] }}
+<!-- ============================ HERO ============================ -->
+<section class="border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 items-center">
+            <div class="md:col-span-7 order-2 md:order-1">
+                <p class="eyebrow mb-6">Freelance Decision Scientist · Amsterdam</p>
+                <h1 class="display text-4xl sm:text-5xl lg:text-6xl mb-7">
+                    Machine learning that<br class="hidden sm:block"> earns its place in
+                    <span class="text-accent italic">production.</span>
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light">
-                    Freelance Decision Scientist
+                <p class="text-lg md:text-xl text-muted leading-relaxed max-w-xl mb-9">
+                    I&rsquo;m Tomislav Suhina, PhD — a data scientist who learned by doing everything,
+                    from model architecture and MLOps to leading teams and stakeholder management.
+                    Over 7+ years I&rsquo;ve built systems for Heineken and Rabobank that are
+                    <em>still running, and still creating value, years later.</em>
                 </p>
-                <p class="text-lg mb-8 text-blue-50 leading-relaxed">
-                    7+ years of industry experience building ML systems, leading teams, and delivering solutions that drive real business impact.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="/services.html" class="inline-block px-8 py-3 bg-white text-blue-700 rounded-lg hover:bg-blue-50 transition-all font-semibold shadow-lg hover:shadow-xl no-underline">
-                        View Services
+                <div class="flex flex-wrap items-center gap-5">
+                    <a href="/services.html" class="btn btn-primary no-underline">
+                        Explore services
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
-                    <a href="/contact.html" class="inline-block px-8 py-3 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition-all font-semibold border-2 border-blue-400 no-underline">
-                        Get In Touch
+                    <a href="/projects.html" class="link-arrow no-underline">
+                        See selected work
                     </a>
                 </div>
             </div>
 
-            <!-- Profile Image -->
-            <div class="order-1 md:order-2 flex justify-center md:justify-end">
-                <img src="{{ SITEURL }}/images/about/cv_photo_full.JPG"
-                     alt="Tomislav Suhina"
-                     class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-8 border-white shadow-2xl">
+            <div class="md:col-span-5 order-1 md:order-2 flex justify-center md:justify-end">
+                <div class="relative">
+                    <div class="absolute -inset-3 border border-line rounded-sm translate-x-3 translate-y-3"></div>
+                    <img src="{{ SITEURL }}/images/about/cv_photo_full.JPG"
+                         alt="Tomislav Suhina"
+                         class="relative w-60 h-72 md:w-72 md:h-[22rem] object-cover rounded-sm grayscale-[15%]">
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Main Content -->
-<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="prose prose-lg max-w-none">
-        <!-- Remove the inline image from content since it's now in hero -->
-        {{ page.content | replace('<img src="{static}/images/about/cv_photo_full.JPG" alt="Tomislav Suhina" style="float: left; margin: 0 20px 20px 0; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #ddd;">', '') }}
-    </div>
-
-    <!-- Key Highlights -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
+<!-- ======================= SELECTED RESULTS ======================= -->
+<section class="border-b border-line bg-surface">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14">
+        <p class="eyebrow mb-10">Selected results</p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+            <div>
+                <div class="metric-value">€10s&#8201;M</div>
+                <p class="metric-label">Value captured by MMM in year one</p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">7+ Years Experience</h3>
-            <p class="text-gray-600">Industry and academic expertise in ML, MLOps, and data science</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                </svg>
+            <div>
+                <div class="metric-value">7+ yrs</div>
+                <p class="metric-label">Building production ML in industry</p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Enterprise Solutions</h3>
-            <p class="text-gray-600">Delivered for Heineken, Rabobank, and other leading organizations</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-            <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
+            <div>
+                <div class="metric-value">15+</div>
+                <p class="metric-label">Specialists led as technical lead</p>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Production Ready</h3>
-            <p class="text-gray-600">Built systems still running years later with proven business impact</p>
+            <div>
+                <div class="metric-value">5+ yrs</div>
+                <p class="metric-label">Systems still live &amp; used daily</p>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- CTA Section -->
-    <div class="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Work Together?</h2>
-        <p class="text-lg mb-8 text-blue-50">Let's discuss how I can help with your data science and ML projects.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="/services.html" class="inline-block px-8 py-3 bg-white text-blue-700 rounded-lg hover:bg-blue-50 transition-all font-semibold no-underline">
-                Explore Services
+<!-- ======================= EXPERIENCE WITH ======================= -->
+<section class="border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-12">
+        <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
+            <p class="font-mono text-xs uppercase tracking-widest text-muted shrink-0">Experience with</p>
+            <div class="flex flex-wrap items-center gap-x-10 gap-y-4">
+                <span class="font-display text-xl md:text-2xl text-ink/80">Heineken</span>
+                <span class="font-display text-xl md:text-2xl text-ink/80">Rabobank</span>
+                <span class="font-display text-xl md:text-2xl text-ink/80">Xebia&#8202;·&#8202;Xccelerated</span>
+                <span class="font-display text-xl md:text-2xl text-ink/80">University of Amsterdam</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================= NARRATIVE ======================= -->
+<section class="border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+            <div class="md:col-span-4">
+                <p class="eyebrow mb-5">Approach</p>
+                <h2 class="display text-3xl md:text-4xl">Substance over buzzwords.</h2>
+            </div>
+            <div class="md:col-span-8 prose">
+                <p>
+                    My journey started in academic research — a PhD in Physical Chemistry from the
+                    University of Amsterdam, designing molecules and modelling their behaviour. That
+                    scientific rigour still shapes how I approach data science: comfortable with the
+                    unknown, systematic in finding the answer.
+                </p>
+                <p>
+                    I prioritise robust approaches over fleeting trends, and clear communication with
+                    stakeholders at every level. I believe that <em>&ldquo;simple is better than complex,
+                    and complex is better than complicated.&rdquo;</em>
+                </p>
+                <p>
+                    What I&rsquo;m proud of: building projects from scratch end to end, leading a 15+ person
+                    team as technical lead on one of Heineken&rsquo;s most successful analytics projects, and
+                    being brought back as a contractor to improve solutions I originally built. That full-circle
+                    moment still makes me proud and humbled.
+                </p>
+                <p class="!mb-0">
+                    <a href="/experience.html" class="link-arrow no-underline">Read the full experience</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================= FEATURED WORK ======================= -->
+<section class="border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20">
+        <div class="flex items-end justify-between mb-12">
+            <div>
+                <p class="eyebrow mb-5">Selected work</p>
+                <h2 class="display text-3xl md:text-4xl">Built to last.</h2>
+            </div>
+            <a href="/projects.html" class="hidden sm:inline-flex link-arrow no-underline">All projects</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-line">
+            <!-- MMM -->
+            <a href="/projects.html" class="group block p-8 border-b md:border-b-0 md:border-r border-line no-underline hover:bg-surface">
+                <p class="font-mono text-xs uppercase tracking-widest text-accent mb-4">Heineken · 2022&ndash;23</p>
+                <h3 class="font-display text-2xl text-ink mb-3 group-hover:text-accent">Media Mix Modeling</h3>
+                <p class="text-muted leading-relaxed mb-5">Bayesian marketing optimisation as technical lead of a 15+ person team. Captured value at tens-of-millions scale in year one — still used for strategic decisions.</p>
+                <span class="link-arrow no-underline">Read more</span>
             </a>
-            <a href="/contact.html" class="inline-block px-8 py-3 bg-transparent text-white rounded-lg hover:bg-white hover:text-blue-700 transition-all font-semibold border-2 border-white no-underline">
-                Contact Me
+            <!-- RAG -->
+            <a href="/projects.html" class="group block p-8 border-b md:border-b-0 md:border-r border-line no-underline hover:bg-surface">
+                <p class="font-mono text-xs uppercase tracking-widest text-accent mb-4">Rabobank · 2023&ndash;25</p>
+                <h3 class="font-display text-2xl text-ink mb-3 group-hover:text-accent">Knowledge Retrieval (RAG)</h3>
+                <p class="text-muted leading-relaxed mb-5">RAG-based information retrieval from internal knowledge bases supporting business decisions. Delivered through to production.</p>
+                <span class="link-arrow no-underline">Read more</span>
+            </a>
+            <!-- Forecasting -->
+            <a href="/projects.html" class="group block p-8 no-underline hover:bg-surface">
+                <p class="font-mono text-xs uppercase tracking-widest text-accent mb-4">Heineken · 2019&ndash;22</p>
+                <h3 class="font-display text-2xl text-ink mb-3 group-hover:text-accent">Financial KPI Forecasting</h3>
+                <p class="text-muted leading-relaxed mb-5">Built end to end and established the org&rsquo;s time-series best practices. Used to this day for global financial planning.</p>
+                <span class="link-arrow no-underline">Read more</span>
             </a>
         </div>
     </div>
-</article>
+</section>
+
+<!-- ======================= CTA ======================= -->
+<section>
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20">
+        <div class="bg-ink text-paper rounded-sm px-8 py-14 md:px-16 md:py-20 text-center">
+            <p class="eyebrow eyebrow--plain mb-6 !text-accent">Available for new engagements</p>
+            <h2 class="font-display text-3xl md:text-5xl text-paper mb-6 tracking-tight">Have a problem worth solving?</h2>
+            <p class="text-paper/70 text-lg max-w-2xl mx-auto mb-10">
+                Whether you need someone to build from scratch, lead a complex delivery, or bridge
+                technical and business needs — I bring the full range of experience.
+            </p>
+            <a href="/contact.html" class="btn btn-accent no-underline">
+                Start a conversation
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
 {% endblock %}

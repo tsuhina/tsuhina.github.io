@@ -106,16 +106,16 @@ git push origin main
 
 ## 🎨 Styling
 
-The site uses **Tailwind CSS v4** with modern design principles:
+The site uses **Tailwind CSS v4** with an editorial / minimal-premium design system:
 
 | Feature | Description |
 |---------|-------------|
-| **Design** | Modern, responsive design |
-| **Approach** | Mobile-first methodology |
-| **Colors** | Custom palette (blue/purple/teal) |
-| **Typography** | Inter font family |
-| **Performance** | Optimized CSS output (~22KB) |
-| **Animations** | Smooth transitions and micro-interactions |
+| **Aesthetic** | Editorial premium — warm "paper" canvas, near-black ink, hairline rules, generous whitespace |
+| **Colors** | Semantic tokens: `paper`, `ink`, `muted`, `line`, `accent` (terracotta), `surface` |
+| **Typography** | Fraunces (display serif) · Inter (body) · IBM Plex Mono (labels & metrics) |
+| **Approach** | Mobile-first, accessible (skip link, focus styles, `prefers-reduced-motion`) |
+| **Components** | Reusable classes: `.eyebrow`, `.btn`, `.tag`, `.metric-value`, `.link-arrow` |
+| **Performance** | Optimized CSS output (~25KB), no runtime JS beyond the mobile menu |
 
 ## 📝 Important Notes
 
