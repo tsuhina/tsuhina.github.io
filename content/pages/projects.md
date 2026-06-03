@@ -1,8 +1,6 @@
 Title: Projects
 Slug: projects
 
-# Featured Projects
-
 ## IoT ML Solutions & Logistics Optimization
 **Heineken (Freelance)** | 2025 to Present
 

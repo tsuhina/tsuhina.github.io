@@ -1,8 +1,6 @@
 Title: Experience
 Slug: experience
 
-# Professional Experience
-
 ## Freelance Decision Scientist (ZZP)
 **Independent Consultant** | April 2023 to Present
 

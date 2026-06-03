@@ -55,8 +55,8 @@ PAGE_URL = '{slug}.html'
 INDEX_SAVE_AS = 'blog/index.html'
 INDEX_URL = 'blog/index.html'
 
-# Disable auto-generated listing pages
-DIRECT_TEMPLATES = []
+# Enable only the blog index (mapped to /blog/ via INDEX_SAVE_AS below)
+DIRECT_TEMPLATES = ['index']
 AUTHOR_SAVE_AS = ''
 AUTHOR_URL = ''
 AUTHORS_SAVE_AS = ''

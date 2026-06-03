@@ -18,7 +18,7 @@
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
     <meta name="description" content="{{ meta_desc }}" />
     <meta name="author" content="{{ AUTHOR }}" />
-    <link rel="canonical" href="{{ SITEURL }}/{% if page %}{{ page.url }}{% elif article %}{{ article.url }}{% endif %}" />
+    <link rel="canonical" href="{% block canonical %}{{ SITEURL }}/{% if page %}{{ page.url }}{% elif article %}{{ article.url }}{% endif %}{% endblock %}" />
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
@@ -40,7 +40,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     {% block extra_head %}{% endblock %}
 </head>
@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div class="border-t border-paper/15 mt-12 pt-8 flex flex-col sm:flex-row justify-between gap-3 text-sm text-paper/50">
-                <p>&copy; {{ '2025' }} {{ AUTHOR }}. All rights reserved.</p>
+                <p>&copy; 2026 {{ AUTHOR }}. All rights reserved.</p>
                 <p class="font-mono text-xs tracking-wide">Independent contractor · registered in NL</p>
             </div>
         </div>
