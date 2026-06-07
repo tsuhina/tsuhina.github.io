@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}Services — {{ SITENAME }}{% endblock %}
+{% block title %}Services · {{ SITENAME }}{% endblock %}
 
 {% block content %}
 <!-- Header -->
-<section class="border-b border-line">
+<section class="border-b border-line blueprint-grid overflow-hidden">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-24">
-        <p class="eyebrow mb-6">Services</p>
-        <h1 class="display text-4xl md:text-6xl mb-8 max-w-3xl">End-to-end ML, from architecture to production.</h1>
-        <p class="text-lg md:text-xl text-muted leading-relaxed max-w-2xl">
-            A freelance decision scientist with a PhD and deep industry experience — I&rsquo;ve learned
-            end-to-end delivery by doing everything, from model architecture and MLOps to project and
-            stakeholder management. Some of what I built is still in use today.
+        <p class="eyebrow mb-6 reveal-load" style="animation-delay:.05s">Services · Capabilities index</p>
+        <h1 class="display text-4xl md:text-6xl mb-8 max-w-3xl reveal-load" style="animation-delay:.15s">End-to-end ML &amp; AI, from architecture to production.</h1>
+        <p class="text-lg md:text-xl text-muted leading-relaxed max-w-2xl reveal-load" style="animation-delay:.3s">
+            I&rsquo;m a senior data scientist and AI engineer with a PhD and deep industry experience.
+            I learned end-to-end delivery by doing all of it, from model architecture and MLOps to
+            agentic AI, RAG, and stakeholder management. Some of what I built is still in use today.
         </p>
     </div>
 </section>
@@ -19,48 +19,77 @@
 <!-- Services list -->
 <section>
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        {% set services = [
-            {"t": "Machine Learning Solutions", "d": "Custom ML for business-critical applications — retention modelling at Rabobank, financial forecasting at Heineken (used to this day). Classification, regression, time series, causal inference and A/B testing.", "k": ["XGBoost", "CatBoost", "Scikit-learn", "PyTorch", "PyMC", "Prophet", "CausalNex"]},
-            {"t": "Marketing Analytics & MMM", "d": "Technical lead on one of Heineken's most successful analytics projects — Media Mix Modeling that captured tens of millions in value in year one and is still used for strategic decisions. Bayesian attribution, ROI measurement, budget optimisation.", "k": ["PyMC", "Bayesian Modeling", "Causal Inference", "Marketing Analytics"]},
-            {"t": "MLOps Implementation", "d": "End-to-end pipelines for reliable deployment and maintenance. Built deployment blueprints at Rabobank and established practices at Heineken — CI/CD, drift detection, data quality, monitoring and reproducibility.", "k": ["Docker", "Kubernetes", "MLFlow", "GitHub Actions", "Azure DevOps", "Databricks"]},
-            {"t": "RAG & LLM Applications", "d": "Intelligent applications using Retrieval Augmented Generation. Delivered a RAG-based knowledge retrieval system at Rabobank, deployed to production — Q&A systems, semantic search and LLM evaluation.", "k": ["LangChain", "OpenAI", "HuggingFace", "ChromaDB", "FAISS"]},
-            {"t": "IoT ML Solutions", "d": "Batch analytics and predictive modelling for IoT systems. Built equipment monitoring at Heineken and currently delivering IoT frameworks — sensor data processing, predictive maintenance and production deployment with drift detection.", "k": ["Python", "Pandas", "Scikit-learn", "XGBoost", "MLFlow", "Evidently"]},
-            {"t": "Logistics Optimization", "d": "Supply chain and operations optimisation. Delivered demand forecasting and cost-benefit simulation at Heineken — route optimisation, resource allocation, scenario analysis and raw-material planning.", "k": ["Python", "PyMC", "Scikit-learn", "Polars", "NetworkX"]},
-            {"t": "Data Engineering & Big Data", "d": "Large-scale processing and distributed computing — PySpark on Databricks, cloud data lakes and warehouses, query engines, and ETL pipelines with orchestration across AWS and Azure.", "k": ["PySpark", "Databricks", "AWS", "Azure", "GitHub Actions"]},
-            {"t": "Entity Deduplication & Record Linkage", "d": "Cleaning duplicate records that accumulate across systems — fuzzy matching, phonetic algorithms and probabilistic ML record matching for customer master data and product catalogs, at the scale of millions of records.", "k": ["Pandas", "Polars", "PySpark", "RecordLinkage", "Dedupe"]},
-            {"t": "Data Science Consulting", "d": "Strategic guidance and hands-on implementation — data strategy and use-case identification, cross-functional collaboration, stakeholder alignment, and technical mentoring grounded in what actually works in production.", "k": ["Data strategy", "Stakeholder alignment", "ML best practices"]},
-            {"t": "Python Training & Mentoring", "d": "Workshops and mentoring on Python, data science and ML engineering — software engineering best practices, testing and code quality, modern tooling, and team enablement. Guided by the Zen of Python.", "k": ["Best practices", "Testing", "Team enablement"]}
+        {% set groups = [
+            {"cat": "Machine Learning & Forecasting", "items": [
+                {"t": "Machine Learning Solutions", "d": "Custom models for business-critical decisions, applying classification, regression and clustering to use-cases such as customer churn and retention, risk scoring, value estimation and customer segmentation. I have delivered a customer-retention model with a statistically significant, value-quantified uplift.", "k": ["XGBoost", "CatBoost", "Scikit-learn", "PyTorch", "PyMC"]},
+                {"t": "Forecasting & Demand Planning", "d": "Time series forecasting for planning and operations, covering demand, capacity and financial KPIs across industrial and subscription/SaaS businesses. I built financial KPI forecasting and raw-material demand forecasting, and set the time series practices a global team still relies on.", "k": ["Prophet", "PyMC", "DARTS", "Nixtla", "Statsmodels"]},
+                {"t": "Predictive Maintenance & Anomaly Detection", "d": "Condition monitoring for industrial equipment, applying classification, causal models, anomaly detection and clustering to failure detection, root-cause analysis, predictive maintenance and event grouping. I have delivered equipment-monitoring models in production, with drift detection.", "k": ["Scikit-learn", "XGBoost", "Stumpy", "Ruptures", "Evidently"]},
+                {"t": "Recommender Systems & Personalization", "d": "Recommendation and next-best-action systems for product, content and operations. I have built recommender solutions, including a product design recommender, and apply ranking and personalisation across customer and operational use cases.", "k": ["Python", "Scikit-learn", "Embeddings", "Ranking"]}
+            ]},
+            {"cat": "Causal & Decision Science", "items": [
+                {"t": "Causal Inference & Experimentation", "d": "Understanding what actually drives an outcome, not just what correlates with it: A/B testing, uplift modelling and causal analysis. I built the A/B testing framework behind a production retention model and use Bayesian and causal methods throughout.", "k": ["PyMC", "CausalNex", "DoWhy", "A/B Testing"]},
+                {"t": "Marketing Analytics & MMM", "d": "Technical lead on a flagship Media Mix Modeling programme that captured tens of millions in value in its first year and is still used for strategic decisions. Bayesian attribution, ROI measurement and budget optimisation.", "k": ["PyMC", "Bayesian Modeling", "Causal Inference", "Marketing Analytics"]},
+                {"t": "Logistics & Operations Optimization", "d": "Optimisation for supply chain and operations: routing, allocation, scheduling and scenario simulation. I have delivered truck-utilisation and route optimisation with delivery-time estimation, and advised on the approach, scoping and phasing of a transportation optimiser prototype.", "k": ["Python", "NetworkX", "Polars", "Scikit-learn", "PyMC"]}
+            ]},
+            {"cat": "GenAI, Agents & LLM Applications", "items": [
+                {"t": "Agentic AI & RAG Applications", "d": "Autonomous agents and retrieval-augmented systems built for production. I delivered a RAG knowledge-retrieval system, deployed to production, and a management reporting agent with execution tracing to debug how it retrieves and reasons.", "k": ["LangGraph", "PydanticAI", "LangChain", "ChromaDB", "FAISS"]},
+                {"t": "GenAI Workflow Automation", "d": "Automating and streamlining business processes with LLMs and agents: document-heavy workflows, reporting, triage and internal copilots. I design these as small, verifiable steps so they behave reliably once in production.", "k": ["LangGraph", "PydanticAI", "MLflow Tracing"]},
+                {"t": "Document Intelligence & Extraction", "d": "Turning unstructured documents into structured, reliable data. I extract fields, tables and entities from contracts, invoices, forms and reports, with classification and validation so the output is ready for downstream systems. This is the extraction layer beneath document-heavy workflows, separate from question-answering.", "k": ["Python", "LLM Extraction", "Pydantic", "Validation"]},
+                {"t": "AI Reliability & Evaluation", "d": "Making LLM systems trustworthy in production: execution tracing, LLM-as-a-judge evaluation, regression testing and observability. I trace how an agent retrieves and reasons, then test its answers against baselines.", "k": ["MLflow Tracing", "LLM-as-a-judge", "Custom Evals"]},
+                {"t": "Private & Self-Hosted LLM Deployment", "d": "Running open-weight models on your own infrastructure so sensitive data never leaves the organisation. A practical option for regulated and privacy-sensitive work where public APIs are not acceptable.", "k": ["LM Studio", "Llama", "Open-weight models", "On-prem"]}
+            ]},
+            {"cat": "Advisory, Strategy & Standards", "items": [
+                {"t": "Fractional ML/AI Lead", "d": "Senior technical leadership without a full-time hire. I set architecture, guide delivery and make the hard technical calls. I have led a 15+ person interdisciplinary team and owned high-impact programmes end to end.", "k": ["Architecture", "Delivery leadership", "Technical strategy"]},
+                {"t": "AI Strategy & Use-Case Discovery", "d": "Finding where AI and ML actually create value: opportunity mapping, feasibility, prioritisation and scoping before a line of code is written, grounded in what survives contact with production.", "k": ["Use-case discovery", "Feasibility", "Roadmapping"]},
+                {"t": "Architecture & Technical Due Diligence", "d": "An independent review of AI and ML systems and plans: architecture, build versus buy, vendor and approach sanity checks, and risk assessment before you commit budget.", "k": ["Architecture review", "Due diligence", "Risk assessment"]},
+                {"t": "Data Science Maturity Assessment & Standards", "d": "How good is your data science, really, and how do projects compare? I define the criteria and methodology to evaluate product maturity and benchmark projects against each other, then turn the findings into concrete standards and good practices.", "k": ["Maturity assessment", "Benchmarking", "Standards & best practices"]}
+            ]},
+            {"cat": "Data, MLOps & Enablement", "items": [
+                {"t": "Data Engineering & Big Data", "d": "Large-scale processing and distributed computing: PySpark on Databricks, cloud data lakes and warehouses, query engines, and ETL pipelines with orchestration across AWS and Azure.", "k": ["PySpark", "Databricks", "AWS", "Azure", "GitHub Actions"]},
+                {"t": "MLOps Implementation", "d": "End-to-end pipelines for reliable deployment and maintenance. I have built deployment blueprints and established MLOps practices in production: CI/CD, drift detection, data quality, monitoring and reproducibility.", "k": ["Docker", "Kubernetes", "MLFlow", "GitHub Actions", "Azure DevOps", "Databricks"]},
+                {"t": "Entity Deduplication & Record Linkage", "d": "Cleaning duplicate records that accumulate across systems: fuzzy matching, phonetic algorithms, probabilistic ML record matching and active learning, for customer master data, product catalogs and spare-parts master data, at the scale of millions of records. I applied it to spare-parts master data to improve pooling and reduce global stock.", "k": ["Pandas", "Polars", "PySpark", "RecordLinkage", "Dedupe", "Active learning"]},
+                {"t": "Python Training & Mentoring", "d": "Workshops and mentoring on Python, data science and ML engineering: software engineering best practices, testing and code quality, modern tooling, and team enablement. Guided by the Zen of Python.", "k": ["Best practices", "Testing", "Team enablement"]}
+            ]}
         ] %}
 
-        <div class="border-t border-line">
-        {% for s in services %}
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 border-b border-line group">
-                <div class="md:col-span-1">
-                    <span class="font-mono text-sm text-accent">{{ '%02d' % loop.index }}</span>
-                </div>
-                <div class="md:col-span-4">
-                    <h2 class="font-display text-2xl md:text-[1.7rem] text-ink leading-tight">{{ s.t }}</h2>
-                </div>
-                <div class="md:col-span-7">
-                    <p class="text-muted leading-relaxed mb-5">{{ s.d }}</p>
-                    <div>
-                        {% for tech in s.k %}<span class="tag">{{ tech }}</span>{% endfor %}
+        {% for g in groups %}
+        <div class="pt-16 first:pt-12">
+            <div class="flex items-center gap-4 mb-8 reveal">
+                <p class="eyebrow !mb-0">{{ g.cat }}</p>
+                <div class="dim-rule flex-1 hidden sm:block"></div>
+            </div>
+            <div class="border-t border-line">
+            {% for s in g['items'] %}
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-10 border-b border-line group reveal" style="--i:{{ loop.index0 }}">
+                    <div class="md:col-span-1">
+                        <span class="coord !text-accent group-hover:translate-x-1 inline-block transition-transform">{{ '%02d' % loop.index }}</span>
+                    </div>
+                    <div class="md:col-span-4">
+                        <h2 class="font-display font-bold text-2xl md:text-[1.7rem] text-ink leading-tight group-hover:text-accent transition-colors">{{ s.t }}</h2>
+                    </div>
+                    <div class="md:col-span-7">
+                        <p class="text-muted leading-relaxed mb-5">{{ s.d }}</p>
+                        <div>
+                            {% for tech in s.k %}<span class="tag">{{ tech }}</span>{% endfor %}
+                        </div>
                     </div>
                 </div>
+            {% endfor %}
             </div>
-        {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </section>
 
 <!-- CTA -->
 <section>
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20">
-        <div class="bg-ink text-paper rounded-sm px-8 py-14 md:px-16 md:py-20 text-center">
-            <h2 class="font-display text-3xl md:text-5xl text-paper mb-6 tracking-tight">Let&rsquo;s build something that lasts.</h2>
+        <div class="bg-ink text-paper px-8 py-14 md:px-16 md:py-20 text-center blueprint-grid blueprint-grid--ink reveal">
+            <span class="crosshair mx-auto mb-7"></span>
+            <h2 class="font-display font-bold text-3xl md:text-5xl text-paper mb-6 tracking-tight">Let&rsquo;s work together.</h2>
             <p class="text-paper/70 text-lg max-w-2xl mx-auto mb-10">
-                Build from scratch, lead a complex delivery, or bridge technical and business needs —
-                I bring the full range of experience.
+                Build from scratch, lead a complex delivery, or connect the technical and business
+                sides. I bring that range of experience.
             </p>
             <a href="/contact.html" class="btn btn-accent no-underline">
                 Get in touch

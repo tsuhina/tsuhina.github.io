@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Blog — {{ SITENAME }}{% endblock %}
-{% block og_title %}Blog — {{ SITENAME }}{% endblock %}
+{% block title %}Blog · {{ SITENAME }}{% endblock %}
+{% block og_title %}Blog · {{ SITENAME }}{% endblock %}
 {% block canonical %}{{ SITEURL }}/blog/{% endblock %}
 
 {% block content %}
 <!-- Header -->
-<section class="border-b border-line">
+<section class="border-b border-line blueprint-grid overflow-hidden">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-24">
-        <p class="eyebrow mb-6">Writing</p>
-        <h1 class="display text-4xl md:text-6xl mb-6">Notes on data science in practice.</h1>
-        <p class="text-lg text-muted max-w-2xl leading-relaxed">Occasional writing on production ML, MLOps and the craft of delivering analytics that actually works.</p>
+        <p class="eyebrow mb-6 reveal-load" style="animation-delay:.05s">Writing</p>
+        <h1 class="display text-4xl md:text-6xl mb-6 reveal-load" style="animation-delay:.15s">Notes on data science in practice.</h1>
+        <p class="text-lg text-muted max-w-2xl leading-relaxed reveal-load" style="animation-delay:.3s">Occasional writing on production ML, MLOps and the craft of delivering analytics that actually works.</p>
     </div>
 </section>
 
@@ -20,12 +20,12 @@
         {% if articles %}
         <div class="border-t border-line">
             {% for article in articles_page.object_list %}
-            <article class="py-10 border-b border-line">
-                <p class="font-mono text-xs uppercase tracking-widest text-accent mb-4">
+            <article class="py-10 border-b border-line reveal" style="--i:{{ loop.index0 }}">
+                <p class="coord !text-accent mb-4">
                     <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
                     {% if article.category %} · {{ article.category }}{% endif %}
                 </p>
-                <h2 class="font-display text-2xl md:text-3xl text-ink mb-4 leading-tight">
+                <h2 class="font-display font-bold text-2xl md:text-3xl text-ink mb-4 leading-tight">
                     <a href="{{ SITEURL }}/{{ article.url }}" class="hover:text-accent no-underline">{{ article.title }}</a>
                 </h2>
                 <div class="text-muted leading-relaxed mb-5 prose max-w-none">{{ article.summary }}</div>
@@ -45,7 +45,7 @@
             </nav>
         {% endif %}
         {% else %}
-        <p class="text-muted py-16 text-center">No posts yet — check back soon.</p>
+        <p class="text-muted py-16 text-center">No posts yet. Check back soon.</p>
         {% endif %}
     </div>
 </section>

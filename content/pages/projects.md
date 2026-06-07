@@ -1,104 +1,66 @@
 Title: Projects
 Slug: projects
 
-## IoT ML Solutions & Logistics Optimization
-**Heineken (Freelance)** | 2025 to Present
-
-<div style="text-align: center; margin: 20px 0;">
-    <img src="{static}/images/projects/IoT.png" alt="IoT ML Framework" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-**Technologies**: Python, IoT Sensors, Machine Learning, Optimization Algorithms
-
-Delivering production ready ML projects in the IoT domain and logistics optimization space. Building effective frameworks and scalable code solutions.
-
-**Key Deliverables**:
-- End to end ML pipelines for IoT data processing
-- Logistics optimization frameworks
-- Production deployment with monitoring and drift detection
+A selection of what I've built and delivered, described at a high level. The specifics of client engagements are kept in confidence, so these focus on the problem, the approach and the outcome rather than naming names.
 
 
-## Internal Knowledge Retrieval System
-**Rabobank** | 2023 to 2025
+## Featured
 
-<div style="text-align: center; margin: 20px 0;">
-    <img src="{static}/images/projects/knowledge-retrieval.png" alt="RAG System" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
+### Bayesian Media Mix Modeling
+Technical lead of a 15+ person interdisciplinary team (data scientists, data and MLOps engineers, front end) delivering a Bayesian marketing-mix model for budget allocation and ROI optimisation. It captured value at tens-of-millions scale in its first year and is still used for strategic marketing decisions today.
 
-**Technologies**: Python, LangChain, RAG, ChromaDB/FAISS, OpenAI/HuggingFace
+*Stack: PyMC, Bayesian modelling, causal inference, marketing analytics*
 
-Developed RAG based system for information retrieval from knowledge bases supporting business decisions. Worked through multiple iterations of optimization and evaluation as independent contractor.
+### Agentic Management-Reporting System
+An autonomous agent that lets managers interrogate live project status: surfacing blockers and at-risk workstreams, and flagging team members who are over- or under-utilised. The hard part was trust. I instrumented it with MLflow execution tracing to see exactly how it retrieves context and reasons, and an LLM-as-a-judge evaluation harness to test its answers against baselines before relying on them. Designed around small, granular, verifiable tasks so its behaviour stays reliable in production.
 
-Delivered successful PoC, solution deployed to production.
+*Stack: LangGraph / PydanticAI, RAG, MLflow Tracing, LLM-as-a-judge*
 
+### Data-Science Excellence Standard & Maturity Assessment
+Authored the methodology an organisation uses to score how mature a data product is and to benchmark projects against each other on a common scale. A structured, unambiguous assessment spanning problem scoping (is the goal clear, what KPIs are we moving, what change counts as success), engineering maturity (version control, CI/CD, dev/test/acceptance/production hygiene, monitoring, drift detection, data-quality reporting, MLOps automation), modelling rigour (baselines, reconstruction of the KPIs a project claims to move) and stakeholder management. It turns "how good is this, really?" into something measurable and repeatable, and lets very different projects be compared fairly.
 
-## Customer Retention Modeling
-**Rabobank** | 2023 to 2025
-
-<div style="text-align: center; margin: 20px 0;">
-    <img src="{static}/images/projects/churn.png" alt="Customer Retention Model" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-**Technologies**: Python, XGBoost, A/B Testing, MLOps
-
-Developed predictive model to identify opportunities for proactive actions. Created, optimized, and tuned solution with comprehensive A/B testing framework as independent contractor.
-
-Delivered successful PoC validated through pilot experiment.
+*Focus: standards, benchmarking, data-science governance*
 
 
-## Media Mix Modeling Solution
-**Heineken** | 2022 to 2023
+## GenAI & Agents
 
-<div style="text-align: center; margin: 20px 0;">
-    <img src="{static}/images/projects/mmm.png" alt="Media Mix Modeling" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
+### Production RAG for Decision Support
+A retrieval system that gives front-line decision-makers fast, current answers drawn from a large and complex body of internal policy and external regulatory guidance, built to speed up a high-volume approval workflow. The hard parts were document parsing and the retrieval quality that depends on it. Working with the business, I assembled a validated "golden set" of question-answer pairs and ran it through an LLM-as-a-judge harness, which let the team keep improving the system against a fixed, trusted benchmark. I delivered the MVP that became the basis for the full product launch after my assignment ended.
 
-**Technologies**: Python, Bayesian Modeling, Causal Inference, Marketing Analytics
-
-Managed interdisciplinary team of 15+ direct reports (6 data scientists, 2 front end engineers, 2 data engineers, 3 MLOps engineers, and others) and served as technical lead to deliver advanced Bayesian modeling solution for marketing optimization.
-
-> **Impact** — One of Heineken's most successful analytics projects, **captured significant business value at tens of millions scale in the first year**. Still actively used for strategic marketing decisions.
+*Stack: LangChain, ChromaDB / FAISS, document parsing, LLM-as-a-judge, custom evals*
 
 
-## Financial KPI Forecasting & Time Series Best Practices
-**Heineken** | 2019 to 2022
+## Predictive & Causal ML
 
-<div style="text-align: center; margin: 20px 0;">
-    <img src="{static}/images/projects/forecasting.png" alt="KPI Forecasting" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
+### Causal & Classification for Industrial Equipment Monitoring
+Two models working together on a production line. A classifier automatically assigns each production-loss event to a standard taxonomy (breakdown, minor stop, slow-down, changeover and so on), removing manual tagging by operators and standardising how losses are reported across sites that previously labelled the same events differently, which had undermined the credibility of reporting. A causal model then identifies which machine is the true root cause of a given loss, for example tracing a detected minor stop back to the upstream machine actually responsible for it. Together they make production-loss reporting both automatic and trustworthy. Deployed to production with drift detection.
 
-**Technologies**: Python, Time Series, Statistical Modeling, Business Intelligence
+*Stack: Scikit-learn, XGBoost, causal inference, Evidently, MLflow*
 
-Built from scratch with full end to end ownership: model architecture, development, MLOps, data engineering, project management, stakeholder management. Served as technical lead. Not just a forecasting system, but **established time series best practices that became the foundation for the organization's approach**.
+### Customer Retention Modelling with Experimentation
+Designed the model and the A/B testing methodology end to end, to flag customers at risk of leaving or non-payment so the business could intervene proactively. It showed a statistically significant uplift versus control; I estimated the monetary value of that uplift and set the whole thing up as a reproducible pipeline that ran live throughout the pilot, rather than as a one-off analysis.
 
-> **Impact** — Team later took ownership and evolved it. **Used to this day for global financial planning**.
+*Stack: XGBoost, A/B testing, Databricks, MLflow*
 
+### Financial KPI Forecasting & Time-Series Standards
+Built end to end with full ownership, and established the time-series practices that became the organisation's standard approach. The system lets a central team deep-dive into the forecasts of individual subsidiaries, compare them against the model's, and use the gap to drive a better planning dialogue across the group. Still in use today for global financial planning.
 
-## Equipment Spare Parts Allocation
-**Heineken** | 2019 to 2022
-
-<div style="text-align: center; margin: 20px 0;">
-    <img src="{static}/images/projects/spare-parts.png" alt="Spare Parts System" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-**Technologies**: Python, Optimization, Machine Learning, Data Engineering
-
-Initiated and built with full end to end ownership: model architecture, development, MLOps, data engineering, project management, stakeholder management. Served as technical lead working with less senior colleagues.
-
-> **Impact** — Became a driving force for operational improvements **across global operations with massive opportunity**. Still live and used daily across the organization.
-
-> **Full circle moment** — Later returned as independent contractor for various improvements, proud and humbled to continue this work.
+*Stack: Prophet, PyMC, time-series modelling, statistical forecasting*
 
 
-## Learning Through Variety
-**Heineken** | 2019 to 2022
+## Optimisation & Decision Science
 
-In a fast paced, startup minded analytics environment, I worked on diverse projects to figure out what works in production ML. Some became tools still used today, others taught valuable lessons about real world constraints:
+### Spare-Parts Allocation & Master-Data Quality
+An optimisation system that helps sites share spare parts and position them at strategic locations for rapid transport in an emergency, cutting the amount of expensive spare stock that has to be held globally. I later returned to extend it with entity deduplication and master-data quality work: cleaning and matching records so that even more parts could be reliably shared and pooled, pushing global stock down further.
 
-- **Equipment Failure Detection (IoT)** - Explored real time anomaly detection for manufacturing equipment, learned the practical challenges of production ML systems
-- **Data Quality Automation** - Built tools for automated validation that are still in use
-- **Bottle Design Recommender** - Explored ML applications in product design
-- **Warehouse Bin Allocation** - Optimization experiments for space utilization
-- **Delivery Route Optimization** - Logistics ML and route planning experiments
-- **Churn Prediction Modeling** - Customer retention analytics
-- **Workshops & Trainings** - Shared knowledge and best practices across all organizational levels
+*Stack: optimisation, RecordLinkage / Dedupe, PySpark, master data management*
+
+### Transportation Optimiser (Advisory)
+Brought in to shape a transportation-optimiser initiative. I defined and protected the scope, produced documentation that all stakeholders signed off on, and explained the limitations, possibilities and trade-offs the business had to weigh to deliver within its budget and resources. The value here was as much about discipline as algorithms: without a clear, agreed scope the project risked drifting in endless modification and dying when the funding ran out.
+
+*Focus: problem framing, scoping, stakeholder alignment, delivery strategy*
+
+
+## Exploration
+
+Alongside the work above I've explored a wide range of applied ML: real-time anomaly detection for manufacturing equipment, automated data-quality validation, a product-design recommender, warehouse bin allocation, delivery-route optimisation and churn prediction. Some became tools that are still in use; all of it sharpened a sense of what actually survives contact with production.

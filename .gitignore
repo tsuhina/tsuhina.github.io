@@ -25,3 +25,8 @@ node_modules/
 
 # Generated CSS
 content/css/output.css
+
+# LaTeX build artifacts
+cv/*.aux
+cv/*.log
+cv/*.out

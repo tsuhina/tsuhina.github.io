@@ -1,34 +1,33 @@
 Title: Experience
 Slug: experience
 
-## Freelance Decision Scientist (ZZP)
-**Independent Consultant** | April 2023 to Present
+## Independent Data Scientist & AI Engineer (ZZP)
+**Independent contractor** | April 2023 to present
 
-Independent data science consultant (registered ZZP) serving diverse clients from startups to Fortune 500 companies. Specializing in production ML systems, MLOps, and end-to-end solution delivery across multiple industries.
+I run an independent data science and AI practice (registered ZZP in the Netherlands), taking on scoped, outcome-based projects for organisations from startups to Fortune 500. I work across production ML, MLOps, agentic AI and RAG, bringing my own methods and tooling and delivering end to end. The specifics of each engagement are kept in confidence.
 
-**Selected Client Engagements:**
+**Selected engagements:**
 
-### Heineken
-Building production ML frameworks for IoT and logistics optimization:
-- End-to-end ML pipelines for equipment monitoring and predictive analytics
-- Logistics optimization solutions with scalable architecture
-- Production deployment with monitoring and maintenance frameworks
+### Heineken · independent contract · 2025 to 2026
+A full-circle engagement: brought back to a former employer as an independent contractor to extend and improve work I had originally built, and to deliver new production ML alongside senior advisory work. Specifics kept in confidence.
 
-### Rabobank
-Delivered production ML systems for business lending analytics:
-- **RAG Knowledge Retrieval System**: Information retrieval solution supporting business decisions, deployed to production
-- **Customer Retention Model**: Predictive modeling with A/B testing framework, validated and deployed to production
-- **MLOps Blueprint**: Comprehensive deployment framework (CI/CD, drift detection, data quality, monitoring)
+### Rabobank · independent contract · 2023 to 2025
+Independent contractor delivering production ML and applied GenAI: predictive modelling, experimentation and decision support, taken through to validated, production-grade outcomes. Specifics kept in confidence.
 
-## Lead Data Scientist Global Commerce & Finance
-**Heineken** | August 2022 to March 2023
+### Across engagements · GenAI & agentic systems
+- Execution tracing (MLflow) and LLM-as-a-judge evaluation to make agent behaviour observable and testable
+- Self-hosting open-weight models (Llama via LM Studio) for privacy-sensitive workflows
+- A "small, granular, verifiable" task design philosophy for reliable agents
 
-Led interdisciplinary team of 15+ direct reports (6 data scientists, 2 front end engineers, 2 data engineers, 3 MLOps engineers, and others) and served as interim product owner for Heineken's Global Data Harmonisation project.
+## Lead Data Scientist, Global Commerce & Finance
+**Heineken** · Permanent employee | August 2022 to March 2023
 
-Delivered **Media Mix Modeling**, one of Heineken's most successful analytics projects with **significant captured business value** (tens of millions in first year alone). Highly impactful and used to this day. Also delivered **Raw Material Demand Forecasting** and **Cost Benefit Simulation**.
+Led an interdisciplinary team of 15+ direct reports (6 data scientists, 2 front end engineers, 2 data engineers, 3 MLOps engineers, and others) and served as interim product owner for the Global Data Harmonisation project.
+
+Delivered **Media Mix Modeling**, one of the company's most successful analytics projects, with **significant captured business value** (tens of millions in the first year alone). Highly impactful and used to this day. Also delivered **Raw Material Demand Forecasting** and **Cost Benefit Simulation**.
 
 ## Data Scientist
-**Heineken** | October 2019 to July 2022
+**Heineken** · Permanent employee | October 2019 to July 2022
 
 Individual contributor who learned end to end delivery by wearing all the hats, from model architecture and data engineering to project management and stakeholder management. Often served as technical lead. Built solutions that became highly impactful and are used to this day.
 
@@ -43,9 +42,9 @@ Also explored diverse applications including equipment failure detection (IoT), 
 Learned by doing everything. Built projects that are highly impactful and used to this day. **Later returned as contractor for various improvements on original projects.**
 
 ## Data Scientist
-**Xccelerated (Xebia) @Heineken** | September 2018 to October 2019
+**Xccelerated (Xebia)** · data-science traineeship, placed at Heineken | September 2018 to October 2019
 
-Joined newly established analytics department in a fast paced, startup minded environment. Experimented with use cases to figure out what delivered value, facilitated business enablement through hands on analytics trainings, and created materials for analytics translators to support utilization of analytical solutions.
+On Xebia's payroll through the Xccelerated data-science traineeship, placed with Heineken as the client, with the plan to join Heineken full time afterwards (which I did). Joined a newly established analytics department in a fast paced, startup minded environment. Experimented with use cases to figure out what delivered value, facilitated business enablement through hands on analytics trainings, and created materials for analytics translators to support utilization of analytical solutions.
 
 ## Fin/ID Tech Consultant
 **UL** | July 2017 to September 2018
@@ -81,9 +80,11 @@ Python • SQL • Bash/Unix scripting
 ### Machine Learning & AI Frameworks
 - **Classical ML**: Scikit-learn, XGBoost, CatBoost, SparkML
 - **Deep Learning**: PyTorch, PyTorch Lightning, fastai
-- **LLM & RAG**: OpenAI, HuggingFace, LangChain, LangGraph, LlamaIndex, ChromaDB, FAISS
+- **LLM, RAG & Agents**: OpenAI, HuggingFace, LangChain, LangGraph, LlamaIndex, PydanticAI, ChromaDB, FAISS
+- **LLM Observability & Evaluation**: MLflow Tracing, LLM-as-a-judge, custom evals
+- **Local / Private LLMs**: LM Studio, Llama
 - **Time Series**: Prophet, PyMC, DARTS, Nixtla, Stumpy, Ruptures
-- **Causal Inference**: PyMC, CausalNex, NetworkX
+- **Causal Inference**: PyMC, CausalNex, DoWhy, NetworkX
 - **Explainability**: SHAP, LIME, ELI5
 
 ### Data Engineering
@@ -101,7 +102,7 @@ Pandas • Polars • PySpark • Databricks
 - **Development**: Git, Unit Testing, Integration Testing
 
 ### Development Tools
-FastAPI • Flask • Streamlit • Bokeh • Panel
+FastAPI • Flask • RESTful APIs • Streamlit • Bokeh • Panel
 
 
 
@@ -120,6 +121,8 @@ Motif Discovery • Change Point Detection • Outlier Detection • Real-time A
 Causal Analysis • A/B Testing • Treatment Effect Estimation • Counterfactual Reasoning • Experimental Design
 
 ### Specialized Applications
+- **Agentic AI Systems**: Autonomous Agents, Agent Debugging, Execution Tracing
+- **LLM Evaluation & Observability**: LLM-as-a-judge, Custom Evals, Retrieval Optimization
 - **Media Mix Modeling**: Marketing Attribution, Channel Optimization, ROI Measurement
 - **IoT Analytics**: Sensor Data Processing, Predictive Maintenance, Equipment Monitoring
 - **Entity Deduplication**: Fuzzy Matching, Record Linkage, Master Data Management

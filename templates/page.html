@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page.title }} — {{ SITENAME }}{% endblock %}
-{% block og_title %}{{ page.title }} — {{ SITENAME }}{% endblock %}
+{% block title %}{{ page.title }} · {{ SITENAME }}{% endblock %}
+{% block og_title %}{{ page.title }} · {{ SITENAME }}{% endblock %}
 
 {% block content %}
 <!-- Header -->
-<section class="border-b border-line">
+<section class="border-b border-line blueprint-grid overflow-hidden">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-24">
-        <p class="eyebrow mb-6">{{ AUTHOR }}</p>
-        <h1 class="display text-4xl md:text-6xl">{{ page.title }}</h1>
+        <p class="eyebrow mb-6 reveal-load" style="animation-delay:.05s">{{ AUTHOR }}</p>
+        <h1 class="display text-4xl md:text-6xl reveal-load" style="animation-delay:.15s">{{ page.title }}</h1>
     </div>
 </section>
 
 <!-- Content -->
 <article class="max-w-3xl mx-auto px-5 sm:px-8 py-16 md:py-20">
-    <div class="prose max-w-none">
+    <div class="prose max-w-none reveal-load" style="animation-delay:.25s">
         {{ page.content }}
     </div>
 </article>

@@ -1,21 +1,27 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Design tokens — editorial / minimal premium
+   Design tokens — "Blueprint" identity (slate + cobalt)
+   Cool technical-drawing aesthetic: CAD grid, crosshairs,
+   dimension rules, coordinate labels.
    ============================================================ */
 @theme {
   /* Palette */
-  --color-paper: #f7f5f0; /* warm off-white background */
+  --color-paper: #f3f5f8; /* cool paper background */
   --color-surface: #ffffff; /* raised panels */
-  --color-ink: #17161a; /* near-black text */
-  --color-muted: #6b6760; /* secondary text */
-  --color-line: #e2ddd3; /* hairline rules / borders */
-  --color-accent: #9a4a2e; /* warm terracotta */
-  --color-accent-dark: #7d3a23;
+  --color-ink: #0e1726; /* slate ink — text + dark feature bands */
+  --color-muted: #5b6878; /* steel grey secondary text */
+  --color-line: #d7deea; /* cool hairline rules / borders */
+  --color-accent: #2f5bff; /* electric cobalt */
+  --color-accent-dark: #1e44e6;
+
+  /* Blueprint grid lines */
+  --color-grid: #e3e9f4; /* faint grid on light surfaces */
+  --color-grid-ink: rgba(120, 150, 255, 0.1); /* grid on dark bands */
 
   /* Typography */
-  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-display: 'Archivo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -45,32 +51,202 @@ a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+/* ============================================================
+   Motion — orchestrated reveals (honours reduced-motion below)
+   ============================================================ */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
   }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  to {
+    opacity: 1;
+    transform: none;
   }
+}
+
+@keyframes draw-grid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Above-the-fold: animate immediately on load, staggered via delay */
+.reveal-load {
+  opacity: 0;
+  animation: rise 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+/* Below-the-fold: hidden until IntersectionObserver adds .in */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   Blueprint motifs
+   ============================================================ */
+
+/* Faint CAD grid background, fades out toward edges */
+.blueprint-grid {
+  position: relative;
+}
+.blueprint-grid > * {
+  position: relative;
+  z-index: 1;
+}
+.blueprint-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
+  background-size: 30px 30px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 35%, transparent 85%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 35%, transparent 85%);
+  animation: draw-grid 1s ease both;
+}
+.blueprint-grid--ink::before {
+  background-image: linear-gradient(to right, var(--color-grid-ink) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid-ink) 1px, transparent 1px);
+}
+
+/* Framed panel with technical corner brackets */
+.ticked {
+  position: relative;
+  border: 1px solid var(--color-line);
+  background-color: var(--color-surface);
+  transition: transform var(--transition-base), border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+.ticked::before,
+.ticked::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  pointer-events: none;
+  border: 0 solid var(--color-muted);
+  transition: border-color var(--transition-base), width var(--transition-base),
+    height var(--transition-base);
+}
+.ticked::before {
+  top: -1px;
+  left: -1px;
+  border-top-width: 1.5px;
+  border-left-width: 1.5px;
+}
+.ticked::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom-width: 1.5px;
+  border-right-width: 1.5px;
+}
+.ticked:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-line));
+  box-shadow: 0 18px 40px -28px rgba(14, 23, 38, 0.5);
+}
+.ticked:hover::before,
+.ticked:hover::after {
+  border-color: var(--color-accent);
+  width: 17px;
+  height: 17px;
+}
+
+/* Static framed plate (no hover lift) — for images, captions */
+.plate {
+  position: relative;
+  border: 1px solid var(--color-line);
+}
+.plate::before,
+.plate::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  border: 0 solid var(--color-accent);
+}
+.plate::before {
+  top: -1px;
+  left: -1px;
+  border-top-width: 1.5px;
+  border-left-width: 1.5px;
+}
+.plate::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom-width: 1.5px;
+  border-right-width: 1.5px;
+}
+
+/* Crosshair "+" marker */
+.crosshair {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: none;
+  background: linear-gradient(var(--color-accent), var(--color-accent)) center / 100% 1.5px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) center / 1.5px 100% no-repeat;
+}
+
+/* Dimension line — hairline with vertical end-ticks */
+.dim-rule {
+  position: relative;
+  height: 1px;
+  background-color: var(--color-line);
+}
+.dim-rule::before,
+.dim-rule::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 1px;
+  height: 7px;
+  background-color: var(--color-line);
+}
+.dim-rule::before {
+  left: 0;
+}
+.dim-rule::after {
+  right: 0;
+}
+
+/* Coordinate / figure caption */
+.coord {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
 }
 
 /* ============================================================
    Reusable components
    ============================================================ */
 
-/* Eyebrow / kicker label */
+/* Eyebrow / coordinate kicker label */
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-accent);
   display: inline-flex;
@@ -80,9 +256,9 @@ button:focus-visible {
 
 .eyebrow::before {
   content: "";
-  width: 1.75rem;
-  height: 1px;
-  background-color: var(--color-accent);
+  width: 1.6rem;
+  height: 1.5px;
+  background-color: currentColor;
   display: inline-block;
 }
 
@@ -90,18 +266,45 @@ button:focus-visible {
   display: none;
 }
 
+/* Nav link with cobalt underline tick */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.875rem;
+  right: 0.875rem;
+  bottom: 0.3rem;
+  height: 1.5px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.75rem;
-  font-weight: 500;
-  font-size: 0.95rem;
+  padding: 0.85rem 1.7rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.92rem;
   letter-spacing: 0.01em;
   text-decoration: none;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: 1px;
+}
+.btn svg {
+  transition: transform var(--transition-base);
+}
+.btn:hover svg {
+  transform: translateX(3px);
 }
 
 .btn-primary {
@@ -135,11 +338,15 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   font-weight: 500;
   color: var(--color-ink);
   text-decoration: none;
-  border-bottom: 1px solid var(--color-accent);
-  padding-bottom: 1px;
+  border-bottom: 1.5px solid var(--color-accent);
+  padding-bottom: 2px;
 }
 .link-arrow:hover {
   color: var(--color-accent);
@@ -153,22 +360,27 @@ button:focus-visible {
   letter-spacing: 0.02em;
   color: var(--color-muted);
   border: 1px solid var(--color-line);
-  border-radius: 2px;
+  border-radius: 1px;
   padding: 0.22rem 0.6rem;
   margin: 0 0.3rem 0.4rem 0;
   background-color: var(--color-surface);
   white-space: nowrap;
+  transition: border-color var(--transition-base), color var(--transition-base);
+}
+.tag:hover {
+  border-color: var(--color-accent);
+  color: var(--color-ink);
 }
 
-/* Big metric figure */
+/* Big metric figure — instrument readout */
 .metric-value {
   font-family: var(--font-display);
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 4vw, 3.4rem);
   line-height: 1;
   color: var(--color-ink);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
 }
 .metric-label {
   font-family: var(--font-mono);
@@ -182,20 +394,19 @@ button:focus-visible {
 /* Display headings helper */
 .display {
   font-family: var(--font-display);
-  font-optical-sizing: auto;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
   color: var(--color-ink);
 }
 
 /* ============================================================
-   Prose — editorial markdown rendering
+   Prose — technical markdown rendering
    ============================================================ */
 .prose {
-  color: #2c2a26;
+  color: #283341;
   max-width: 68ch;
-  font-size: 1.075rem;
+  font-size: 1.05rem;
   line-height: 1.75;
 }
 
@@ -204,22 +415,21 @@ button:focus-visible {
 .prose h3,
 .prose h4 {
   font-family: var(--font-display);
-  font-optical-sizing: auto;
   color: var(--color-ink);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .prose h1 {
-  font-weight: 500;
-  font-size: 2.5em;
+  font-weight: 700;
+  font-size: 2.4em;
   margin-top: 0;
   margin-bottom: 0.6em;
-  line-height: 1.08;
+  line-height: 1.06;
 }
 
 .prose h2 {
-  font-weight: 500;
-  font-size: 1.7em;
+  font-weight: 700;
+  font-size: 1.65em;
   margin-top: 2em;
   margin-bottom: 0.7em;
   line-height: 1.2;
@@ -259,6 +469,10 @@ button:focus-visible {
   font-weight: 600;
 }
 
+.prose em {
+  font-style: italic;
+}
+
 .prose ul {
   margin-top: 1.15em;
   margin-bottom: 1.15em;
@@ -267,16 +481,17 @@ button:focus-visible {
 }
 .prose ul > li {
   position: relative;
-  padding-left: 1.5em;
+  padding-left: 1.6em;
 }
 .prose ul > li::before {
-  content: "";
+  content: "+";
   position: absolute;
   left: 0;
-  top: 0.7em;
-  width: 0.5em;
-  height: 1px;
-  background-color: var(--color-accent);
+  top: 0.02em;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95em;
 }
 
 .prose ol {
@@ -294,22 +509,22 @@ button:focus-visible {
 .prose img {
   margin-top: 2em;
   margin-bottom: 2em;
-  border-radius: 3px;
+  border-radius: 1px;
   border: 1px solid var(--color-line);
-  box-shadow: 0 12px 30px -18px rgba(23, 22, 26, 0.35);
+  box-shadow: 0 14px 34px -22px rgba(14, 23, 38, 0.45);
 }
 
-/* Blockquote → highlighted impact callout */
+/* Blockquote → cobalt impact callout */
 .prose blockquote {
   font-style: normal;
   color: var(--color-ink);
   background-color: var(--color-surface);
   border: 1px solid var(--color-line);
   border-left: 3px solid var(--color-accent);
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 1px 1px 0;
   margin: 1.8em 0;
   padding: 1.1em 1.4em;
-  font-size: 1.02em;
+  font-size: 1em;
   line-height: 1.6;
 }
 .prose blockquote p {
@@ -324,21 +539,21 @@ button:focus-visible {
   color: var(--color-ink);
   font-weight: 500;
   font-size: 0.85em;
-  background-color: #efece4;
+  background-color: #e7ecf5;
   padding: 0.15em 0.4em;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .prose pre {
   background-color: var(--color-ink);
-  color: #e8e4dc;
+  color: #d7e0f5;
   overflow-x: auto;
   font-family: var(--font-mono);
   font-size: 0.85em;
   line-height: 1.7;
   margin-top: 1.7em;
   margin-bottom: 1.7em;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 1.1em 1.3em;
 }
 .prose pre code {
@@ -351,4 +566,26 @@ button:focus-visible {
   border: 0;
   border-top: 1px solid var(--color-line);
   margin: 2.5em 0;
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal,
+  .reveal-load {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
 }

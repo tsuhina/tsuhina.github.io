@@ -1,5 +1,5 @@
 AUTHOR = 'Tomislav Suhina'
-SITENAME = 'Tomislav Suhina - Freelance Decision Scientist'
+SITENAME = 'Tomislav Suhina - Senior Data Scientist & AI Engineer'
 SITEURL = ""
 
 PATH = "content"

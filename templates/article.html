@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}{{ article.title }} — {{ SITENAME }}{% endblock %}
-{% block og_title %}{{ article.title }} — {{ SITENAME }}{% endblock %}
+{% block title %}{{ article.title }} · {{ SITENAME }}{% endblock %}
+{% block og_title %}{{ article.title }} · {{ SITENAME }}{% endblock %}
 
 {% block content %}
 <!-- Header -->
-<section class="border-b border-line">
+<section class="border-b border-line blueprint-grid overflow-hidden">
     <div class="max-w-3xl mx-auto px-5 sm:px-8 py-16 md:py-20">
-        <p class="font-mono text-xs uppercase tracking-widest text-accent mb-5">
+        <p class="coord !text-accent mb-5 reveal-load" style="animation-delay:.05s">
             <a href="/blog/" class="no-underline hover:text-accent-dark">Blog</a> ·
             <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
             {% if article.category %} · {{ article.category }}{% endif %}
         </p>
-        <h1 class="display text-3xl md:text-5xl">{{ article.title }}</h1>
+        <h1 class="display text-3xl md:text-5xl reveal-load" style="animation-delay:.15s">{{ article.title }}</h1>
         {% if article.tags %}
-        <div class="mt-7">
+        <div class="mt-7 reveal-load" style="animation-delay:.3s">
             {% for tag in article.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
         </div>
         {% endif %}
@@ -23,7 +23,7 @@
 
 <!-- Body -->
 <article class="max-w-3xl mx-auto px-5 sm:px-8 py-12 md:py-16">
-    <div class="prose max-w-none">
+    <div class="prose max-w-none reveal-load" style="animation-delay:.25s">
         {{ article.content }}
     </div>
 

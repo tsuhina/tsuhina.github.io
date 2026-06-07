@@ -1,25 +1,32 @@
 {% extends "base.html" %}
 
-{% block title %}Contact — {{ SITENAME }}{% endblock %}
-{% block og_title %}Contact — {{ SITENAME }}{% endblock %}
+{% block title %}Contact · {{ SITENAME }}{% endblock %}
+{% block og_title %}Contact · {{ SITENAME }}{% endblock %}
 
 {% block content %}
 <!-- Header -->
-<section class="border-b border-line">
+<section class="border-b border-line blueprint-grid overflow-hidden">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
             <div class="md:col-span-8">
-                <p class="eyebrow mb-6">Contact</p>
-                <h1 class="display text-4xl md:text-6xl mb-7">Let&rsquo;s talk.</h1>
-                <p class="text-lg md:text-xl text-muted leading-relaxed max-w-xl">
+                <p class="eyebrow mb-6 reveal-load" style="animation-delay:.05s">Contact</p>
+                <h1 class="display text-4xl md:text-6xl mb-7 reveal-load" style="animation-delay:.15s">Let&rsquo;s talk.</h1>
+                <p class="text-lg md:text-xl text-muted leading-relaxed max-w-xl reveal-load" style="animation-delay:.3s">
                     I&rsquo;m always interested in discussing new projects and consulting opportunities.
-                    Based in Amsterdam, I work with clients across Europe and beyond — focused on what
+                    Based in Amsterdam, I work with clients across Europe and beyond, focused on what
                     actually works in production, from quick experiments to systems running for years.
                 </p>
             </div>
-            <div class="md:col-span-4 flex md:justify-end">
-                <img src="{{ SITEURL }}/images/about/img.jpeg" alt="Tomislav Suhina"
-                     class="w-36 h-36 md:w-44 md:h-44 object-cover rounded-sm border border-line grayscale-[15%]">
+            <div class="md:col-span-4 flex md:justify-end reveal-load" style="animation-delay:.2s">
+                <div>
+                    <div class="plate p-2 bg-surface relative">
+                        <img src="{{ SITEURL }}/images/about/img.jpeg" alt="Tomislav Suhina"
+                             class="block w-36 h-36 md:w-44 md:h-44 object-cover"
+                             style="filter: grayscale(0.2) contrast(1.02);">
+                        <div class="absolute inset-2 bg-accent/10 mix-blend-multiply pointer-events-none"></div>
+                    </div>
+                    <p class="coord mt-3 text-right">52.3676&deg;N · 4.9041&deg;E</p>
+                </div>
             </div>
         </div>
     </div>
@@ -28,18 +35,18 @@
 <!-- Contact details -->
 <section class="border-b border-line">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-line">
-            <div class="p-8 border-b md:border-b-0 md:border-r border-line">
-                <p class="font-mono text-xs uppercase tracking-widest text-muted mb-4">Email</p>
-                <a href="mailto:tomislav.suhina@gmail.com" class="font-display text-xl md:text-2xl text-ink hover:text-accent no-underline break-words">tomislav.suhina@gmail.com</a>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="ticked p-8 reveal" style="--i:0">
+                <p class="coord !text-accent mb-4">Email</p>
+                <a href="mailto:tomislav.suhina@gmail.com" class="font-display font-semibold text-xl md:text-2xl text-ink hover:text-accent no-underline break-words">tomislav.suhina@gmail.com</a>
             </div>
-            <div class="p-8 border-b md:border-b-0 md:border-r border-line">
-                <p class="font-mono text-xs uppercase tracking-widest text-muted mb-4">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/tsuhina" target="_blank" rel="noopener" class="font-display text-xl md:text-2xl text-ink hover:text-accent no-underline">linkedin.com/in/tsuhina</a>
+            <div class="ticked p-8 reveal" style="--i:1">
+                <p class="coord !text-accent mb-4">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/tsuhina" target="_blank" rel="noopener" class="font-display font-semibold text-xl md:text-2xl text-ink hover:text-accent no-underline">linkedin.com/in/tsuhina</a>
             </div>
-            <div class="p-8">
-                <p class="font-mono text-xs uppercase tracking-widest text-muted mb-4">Based in</p>
-                <p class="font-display text-xl md:text-2xl text-ink">Amsterdam, NL</p>
+            <div class="ticked p-8 reveal" style="--i:2">
+                <p class="coord !text-accent mb-4">Based in</p>
+                <p class="font-display font-semibold text-xl md:text-2xl text-ink">Amsterdam, NL</p>
                 <p class="text-sm text-muted mt-2">Independent contractor registered in the Netherlands</p>
             </div>
         </div>
@@ -50,24 +57,24 @@
 <section>
     <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
-            <div class="md:col-span-4">
+            <div class="md:col-span-4 reveal">
                 <p class="eyebrow mb-5">How I can help</p>
                 <h2 class="display text-3xl md:text-4xl">Where I add value.</h2>
                 <p class="text-muted mt-5 leading-relaxed">I prioritise robust, proven solutions and clear communication with stakeholders at every level.</p>
             </div>
-            <div class="md:col-span-8">
+            <div class="md:col-span-8 reveal" style="--i:1">
                 <ul class="border-t border-line">
                     {% set offers = [
                         ["Machine Learning Solutions", "Custom models for business-critical applications"],
                         ["Marketing Analytics & MMM", "Bayesian attribution, ROI and budget optimisation"],
                         ["MLOps Implementation", "End-to-end pipelines, deployment and monitoring"],
-                        ["RAG & LLM Applications", "Knowledge retrieval, semantic search and chatbots"],
+                        ["Agentic AI, RAG & LLM", "Autonomous agents, knowledge retrieval and evaluation"],
                         ["IoT ML & Logistics", "Predictive maintenance and supply-chain optimisation"],
                         ["Consulting & Python Training", "Strategy, mentoring and team enablement"]
                     ] %}
                     {% for o in offers %}
-                    <li class="flex items-baseline justify-between gap-6 py-5 border-b border-line">
-                        <span class="font-display text-lg md:text-xl text-ink">{{ o[0] }}</span>
+                    <li class="group flex items-baseline justify-between gap-6 py-5 border-b border-line">
+                        <span class="font-display font-semibold text-lg md:text-xl text-ink group-hover:text-accent transition-colors">{{ o[0] }}</span>
                         <span class="text-muted text-sm text-right max-w-xs">{{ o[1] }}</span>
                     </li>
                     {% endfor %}
@@ -80,10 +87,11 @@
 <!-- CTA -->
 <section>
     <div class="max-w-6xl mx-auto px-5 sm:px-8 pb-20">
-        <div class="bg-ink text-paper rounded-sm px-8 py-14 md:px-16 md:py-20 text-center">
-            <h2 class="font-display text-3xl md:text-5xl text-paper mb-6 tracking-tight">Ready when you are.</h2>
+        <div class="bg-ink text-paper px-8 py-14 md:px-16 md:py-20 text-center blueprint-grid blueprint-grid--ink reveal">
+            <span class="crosshair mx-auto mb-7"></span>
+            <h2 class="font-display font-bold text-3xl md:text-5xl text-paper mb-6 tracking-tight">Ready when you are.</h2>
             <p class="text-paper/70 text-lg max-w-2xl mx-auto mb-10">
-                Drop me a line about your project — I read every message and reply personally.
+                Drop me a line about your project. I read every message and reply personally.
             </p>
             <a href="mailto:tomislav.suhina@gmail.com" class="btn btn-accent no-underline">
                 Send an email

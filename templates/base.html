@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
 
-    {% set site_desc = "Tomislav Suhina — freelance Decision Scientist (PhD) in Amsterdam. Production machine learning, MLOps and data science delivered end to end for clients including Heineken and Rabobank." %}
+    {% set site_desc = "Tomislav Suhina, Senior Data Scientist & AI Engineer (PhD) in Amsterdam. Production machine learning, agentic AI, RAG and MLOps, delivered end to end for clients including Heineken and Rabobank." %}
     {% if article %}
         {% set meta_desc = article.summary|striptags|truncate(180) %}
     {% elif page and page.summary %}
@@ -31,8 +31,8 @@
     <meta name="twitter:description" content="{{ meta_desc }}" />
     <meta name="twitter:image" content="{{ og_image }}" />
 
-    <!-- Favicon (inline SVG: TS monogram) -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2317161a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%239a4a2e' text-anchor='middle'%3ETS%3C/text%3E%3C/svg%3E" />
+    <!-- Favicon (inline SVG: blueprint TS monogram + crosshair) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230e1726'/%3E%3Cpath d='M32 10v44M10 32h44' stroke='%232f5bff' stroke-width='1.5' opacity='0.3'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='26' fill='%232f5bff' text-anchor='middle'%3ETS%3C/text%3E%3C/svg%3E" />
 
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="{{ SITEURL }}/css/output.css" />
@@ -40,7 +40,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     {% block extra_head %}{% endblock %}
 </head>
@@ -56,15 +56,16 @@
         <div class="max-w-6xl mx-auto px-5 sm:px-8">
             <div class="flex justify-between items-center py-5">
                 <!-- Wordmark -->
-                <a href="{{ SITEURL }}/" class="group flex items-baseline gap-2 no-underline">
-                    <span class="font-display text-2xl font-medium text-ink tracking-tight">{{ SITENAME.split(' - ')[0] }}</span>
+                <a href="{{ SITEURL }}/" class="group flex items-center gap-2.5 no-underline">
+                    <span class="crosshair opacity-80 group-hover:opacity-100 transition-opacity"></span>
+                    <span class="font-display text-xl font-bold text-ink tracking-tight">{{ SITENAME.split(' - ')[0] }}</span>
                 </a>
 
                 <!-- Desktop nav -->
                 <nav class="hidden md:flex items-center gap-1">
                     {% for title, link in MENUITEMS %}
                     <a href="{{ link }}"
-                       class="px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         {{ title }}
                     </a>
                     {% endfor %}
@@ -101,15 +102,19 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-ink text-paper/80 mt-24">
+    <footer class="bg-ink text-paper/80 mt-24 blueprint-grid blueprint-grid--ink">
         <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
                 <div class="md:col-span-5">
-                    <p class="font-display text-2xl text-paper mb-3">{{ SITENAME.split(' - ')[0] }}</p>
-                    <p class="text-paper/60 max-w-sm leading-relaxed">Freelance Decision Scientist — production machine learning, MLOps and data science, delivered end to end.</p>
+                    <div class="flex items-center gap-2.5 mb-3">
+                        <span class="crosshair"></span>
+                        <p class="font-display text-2xl font-bold text-paper">{{ SITENAME.split(' - ')[0] }}</p>
+                    </div>
+                    <p class="text-paper/55 max-w-sm leading-relaxed">Senior Data Scientist & AI Engineer. Production ML, agentic AI, RAG and MLOps, delivered end to end.</p>
+                    <p class="coord !text-paper/35 mt-6">52.3676&deg;N &middot; 4.9041&deg;E</p>
                 </div>
                 <div class="md:col-span-3">
-                    <p class="font-mono text-xs uppercase tracking-widest text-paper/50 mb-4">Navigate</p>
+                    <p class="coord !text-accent mb-4">Navigate</p>
                     <ul class="space-y-2.5">
                         {% for title, link in MENUITEMS[:4] %}
                         <li><a href="{{ link }}" class="text-paper/70 hover:text-paper no-underline">{{ title }}</a></li>
@@ -117,7 +122,7 @@
                     </ul>
                 </div>
                 <div class="md:col-span-4">
-                    <p class="font-mono text-xs uppercase tracking-widest text-paper/50 mb-4">Get in touch</p>
+                    <p class="coord !text-accent mb-4">Get in touch</p>
                     <a href="mailto:tomislav.suhina@gmail.com" class="block text-paper hover:text-accent no-underline mb-2">tomislav.suhina@gmail.com</a>
                     <a href="https://www.linkedin.com/in/tsuhina" target="_blank" rel="noopener" class="block text-paper/70 hover:text-paper no-underline mb-2">linkedin.com/in/tsuhina</a>
                     <p class="text-paper/50 text-sm mt-3">Amsterdam, Netherlands</p>
@@ -125,7 +130,7 @@
             </div>
             <div class="border-t border-paper/15 mt-12 pt-8 flex flex-col sm:flex-row justify-between gap-3 text-sm text-paper/50">
                 <p>&copy; 2026 {{ AUTHOR }}. All rights reserved.</p>
-                <p class="font-mono text-xs tracking-wide">Independent contractor · registered in NL</p>
+                <p class="coord !text-paper/40">Independent contractor &middot; registered in NL</p>
             </div>
         </div>
     </footer>
@@ -145,6 +150,25 @@
                 if (!menu.classList.contains('hidden')) toggleMobileMenu();
             }
         });
+
+        // Scroll-triggered reveals
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduce || !('IntersectionObserver' in window)) {
+                els.forEach(function (el) { el.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+            els.forEach(function (el) { io.observe(el); });
+        })();
     </script>
 </body>
 </html>
