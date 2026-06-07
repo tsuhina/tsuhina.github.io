@@ -4,232 +4,243 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Projects - Tomislav Suhina - Freelance Decision Scientist</title>
+
+
+    <title>Projects · Tomislav Suhina - Senior Data Scientist & AI Engineer</title>
+    <meta name="description" content="A selection of what I've built and delivered, described at a high level. The specifics of client engagements are kept in confidence, so these focus on the problem, the approach..." />
+    <meta name="author" content="Tomislav Suhina" />
+    <link rel="canonical" href="https://ts-analytics.eu/projects.html" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tomislav Suhina" />
+    <meta property="og:title" content="Projects · Tomislav Suhina - Senior Data Scientist & AI Engineer" />
+    <meta property="og:description" content="A selection of what I've built and delivered, described at a high level. The specifics of client engagements are kept in confidence, so these focus on the problem, the approach..." />
+    <meta property="og:image" content="https://ts-analytics.eu/images/about/cv_photo_full.JPG" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tomislav Suhina - Senior Data Scientist & AI Engineer" />
+    <meta name="twitter:description" content="A selection of what I've built and delivered, described at a high level. The specifics of client engagements are kept in confidence, so these focus on the problem, the approach..." />
+    <meta name="twitter:image" content="https://ts-analytics.eu/images/about/cv_photo_full.JPG" />
+
+    <!-- Favicon (inline SVG: blueprint TS monogram + crosshair) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230e1726'/%3E%3Cpath d='M32 10v44M10 32h44' stroke='%232f5bff' stroke-width='1.5' opacity='0.3'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='26' fill='%232f5bff' text-anchor='middle'%3ETS%3C/text%3E%3C/svg%3E" />
 
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="https://ts-analytics.eu/css/output.css" />
 
-    <!-- Google Fonts - Inter -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-        }
-    </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
-    <!-- Mobile Menu Toggle (hidden, controlled by JS) -->
-    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-20" onclick="toggleMobileMenu()"></div>
+<body class="bg-paper text-ink min-h-screen flex flex-col font-sans antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-ink focus:text-paper focus:px-4 focus:py-2">Skip to content</a>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-ink/40 z-20" onclick="toggleMobileMenu()"></div>
 
     <!-- Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo/Site Name -->
-                <div class="flex-shrink-0">
-                    <a href="https://ts-analytics.eu/" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline">
-                        Tomislav Suhina
-                    </a>
-                </div>
+    <header class="bg-paper/90 backdrop-blur-sm border-b border-line sticky top-0 z-30">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8">
+            <div class="flex justify-between items-center py-5">
+                <!-- Wordmark -->
+                <a href="https://ts-analytics.eu/" class="group flex items-center gap-2.5 no-underline">
+                    <span class="crosshair opacity-80 group-hover:opacity-100 transition-opacity"></span>
+                    <span class="font-display text-xl font-bold text-ink tracking-tight">Tomislav Suhina</span>
+                </a>
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-1">
+                <!-- Desktop nav -->
+                <nav class="hidden md:flex items-center gap-1">
                     <a href="/"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         About
                     </a>
                     <a href="/services.html"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Services
                     </a>
                     <a href="/experience.html"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Experience
                     </a>
                     <a href="/projects.html"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Projects
                     </a>
                     <a href="/blog/"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Blog
                     </a>
                     <a href="/contact.html"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Contact
                     </a>
+                    <a href="/contact.html" class="ml-2 btn btn-accent !py-2 !px-4 text-sm no-underline">Get in touch</a>
                 </nav>
 
-                <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+                <!-- Mobile toggle -->
+                <button onclick="toggleMobileMenu()" id="mobile-menu-button" class="md:hidden p-2 -mr-2 text-ink" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white shadow-lg">
-            <div class="px-4 py-2 space-y-1">
+        <!-- Mobile nav -->
+        <nav id="mobile-menu" class="hidden md:hidden border-t border-line bg-paper">
+            <div class="px-5 py-4 space-y-1">
                 <a href="/"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     About
                 </a>
                 <a href="/services.html"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Services
                 </a>
                 <a href="/experience.html"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Experience
                 </a>
                 <a href="/projects.html"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Projects
                 </a>
                 <a href="/blog/"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Blog
                 </a>
                 <a href="/contact.html"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Contact
                 </a>
+                <a href="/contact.html" class="block mt-4 btn btn-accent w-full justify-center no-underline">Get in touch</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow">
-<!-- Page Header -->
-<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold">Projects</h1>
+    <!-- Main -->
+    <main id="main" class="flex-grow">
+<!-- Header -->
+<section class="border-b border-line blueprint-grid overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-24">
+        <p class="eyebrow mb-6 reveal-load" style="animation-delay:.05s">Tomislav Suhina</p>
+        <h1 class="display text-4xl md:text-6xl reveal-load" style="animation-delay:.15s">Projects</h1>
     </div>
 </section>
 
-<!-- Main Content -->
-<article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 prose prose-lg max-w-none">
-        <h1>Featured Projects</h1>
-<h2>IoT ML Solutions &amp; Logistics Optimization</h2>
-<p><strong>Heineken (Freelance)</strong> | 2025 to Present</p>
-<div style="text-align: center; margin: 20px 0;">
-    <img src="https://ts-analytics.eu/images/projects/IoT.png" alt="IoT ML Framework" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-<p><strong>Technologies</strong>: Python, IoT Sensors, Machine Learning, Optimization Algorithms</p>
-<p>Delivering production ready ML projects in the IoT domain and logistics optimization space. Building effective frameworks and scalable code solutions.</p>
-<p><strong>Key Deliverables</strong>:
-- End to end ML pipelines for IoT data processing
-- Logistics optimization frameworks
-- Production deployment with monitoring and drift detection</p>
-<h2>Internal Knowledge Retrieval System</h2>
-<p><strong>Rabobank</strong> | 2023 to 2025</p>
-<div style="text-align: center; margin: 20px 0;">
-    <img src="https://ts-analytics.eu/images/projects/knowledge-retrieval.png" alt="RAG System" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-<p><strong>Technologies</strong>: Python, LangChain, RAG, ChromaDB/FAISS, OpenAI/HuggingFace</p>
-<p>Developed RAG based system for information retrieval from knowledge bases supporting business decisions. Worked through multiple iterations of optimization and evaluation as independent contractor.</p>
-<p>Delivered successful PoC, solution deployed to production.</p>
-<h2>Customer Retention Modeling</h2>
-<p><strong>Rabobank</strong> | 2023 to 2025</p>
-<div style="text-align: center; margin: 20px 0;">
-    <img src="https://ts-analytics.eu/images/projects/churn.png" alt="Customer Retention Model" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-<p><strong>Technologies</strong>: Python, XGBoost, A/B Testing, MLOps</p>
-<p>Developed predictive model to identify opportunities for proactive actions. Created, optimized, and tuned solution with comprehensive A/B testing framework as independent contractor.</p>
-<p>Delivered successful PoC validated through pilot experiment.</p>
-<h2>Media Mix Modeling Solution</h2>
-<p><strong>Heineken</strong> | 2022 to 2023</p>
-<div style="text-align: center; margin: 20px 0;">
-    <img src="https://ts-analytics.eu/images/projects/mmm.png" alt="Media Mix Modeling" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-<p><strong>Technologies</strong>: Python, Bayesian Modeling, Causal Inference, Marketing Analytics</p>
-<p>Managed interdisciplinary team of 15+ direct reports (6 data scientists, 2 front end engineers, 2 data engineers, 3 MLOps engineers, and others) and served as technical lead to deliver advanced Bayesian modeling solution for marketing optimization.</p>
-<p><strong>Impact</strong>: One of Heineken's most successful analytics projects, <strong>captured significant business value at tens of millions scale in the first year</strong>. Still actively used for strategic marketing decisions.</p>
-<h2>Financial KPI Forecasting &amp; Time Series Best Practices</h2>
-<p><strong>Heineken</strong> | 2019 to 2022</p>
-<div style="text-align: center; margin: 20px 0;">
-    <img src="https://ts-analytics.eu/images/projects/forecasting.png" alt="KPI Forecasting" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-<p><strong>Technologies</strong>: Python, Time Series, Statistical Modeling, Business Intelligence</p>
-<p>Built from scratch with full end to end ownership: model architecture, development, MLOps, data engineering, project management, stakeholder management. Served as technical lead. Not just a forecasting system, but <strong>established time series best practices that became the foundation for the organization's approach</strong>.</p>
-<p><strong>Impact</strong>: Team later took ownership and evolved it. <strong>Used to this day for global financial planning</strong>.</p>
-<h2>Equipment Spare Parts Allocation</h2>
-<p><strong>Heineken</strong> | 2019 to 2022</p>
-<div style="text-align: center; margin: 20px 0;">
-    <img src="https://ts-analytics.eu/images/projects/spare-parts.png" alt="Spare Parts System" style="width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-</div>
-
-<p><strong>Technologies</strong>: Python, Optimization, Machine Learning, Data Engineering</p>
-<p>Initiated and built with full end to end ownership: model architecture, development, MLOps, data engineering, project management, stakeholder management. Served as technical lead working with less senior colleagues.</p>
-<p><strong>Impact</strong>: Became a driving force for operational improvements <strong>across global operations with massive opportunity</strong>. Still live and used daily across the organization.</p>
-<p><strong>Full circle moment</strong>: Later returned as independent contractor for various improvements, proud and humbled to continue this work.</p>
-<h2>Learning Through Variety</h2>
-<p><strong>Heineken</strong> | 2019 to 2022</p>
-<p>In a fast paced, startup minded analytics environment, I worked on diverse projects to figure out what works in production ML. Some became tools still used today, others taught valuable lessons about real world constraints:</p>
-<ul>
-<li><strong>Equipment Failure Detection (IoT)</strong> - Explored real time anomaly detection for manufacturing equipment, learned the practical challenges of production ML systems</li>
-<li><strong>Data Quality Automation</strong> - Built tools for automated validation that are still in use</li>
-<li><strong>Bottle Design Recommender</strong> - Explored ML applications in product design</li>
-<li><strong>Warehouse Bin Allocation</strong> - Optimization experiments for space utilization</li>
-<li><strong>Delivery Route Optimization</strong> - Logistics ML and route planning experiments</li>
-<li><strong>Churn Prediction Modeling</strong> - Customer retention analytics</li>
-<li><strong>Workshops &amp; Trainings</strong> - Shared knowledge and best practices across all organizational levels</li>
-</ul>
+<!-- Content -->
+<article class="max-w-3xl mx-auto px-5 sm:px-8 py-16 md:py-20">
+    <div class="prose max-w-none reveal-load" style="animation-delay:.25s">
+        <p>A selection of what I've built and delivered, described at a high level. The specifics of client engagements are kept in confidence, so these focus on the problem, the approach and the outcome rather than naming names.</p>
+<h2>Featured</h2>
+<h3>Bayesian Media Mix Modeling</h3>
+<p>Technical lead of a 15+ person interdisciplinary team (data scientists, data and MLOps engineers, front end) delivering a Bayesian marketing-mix model for budget allocation and ROI optimisation. It captured value at tens-of-millions scale in its first year and is still used for strategic marketing decisions today.</p>
+<p><em>Stack: PyMC, Bayesian modelling, causal inference, marketing analytics</em></p>
+<h3>Agentic Management-Reporting System</h3>
+<p>An autonomous agent that lets managers interrogate live project status: surfacing blockers and at-risk workstreams, and flagging team members who are over- or under-utilised. The hard part was trust. I instrumented it with MLflow execution tracing to see exactly how it retrieves context and reasons, and an LLM-as-a-judge evaluation harness to test its answers against baselines before relying on them. Designed around small, granular, verifiable tasks so its behaviour stays reliable in production.</p>
+<p><em>Stack: LangGraph / PydanticAI, RAG, MLflow Tracing, LLM-as-a-judge</em></p>
+<h3>Data-Science Excellence Standard &amp; Maturity Assessment</h3>
+<p>Authored the methodology an organisation uses to score how mature a data product is and to benchmark projects against each other on a common scale. A structured, unambiguous assessment spanning problem scoping (is the goal clear, what KPIs are we moving, what change counts as success), engineering maturity (version control, CI/CD, dev/test/acceptance/production hygiene, monitoring, drift detection, data-quality reporting, MLOps automation), modelling rigour (baselines, reconstruction of the KPIs a project claims to move) and stakeholder management. It turns "how good is this, really?" into something measurable and repeatable, and lets very different projects be compared fairly.</p>
+<p><em>Focus: standards, benchmarking, data-science governance</em></p>
+<h2>GenAI &amp; Agents</h2>
+<h3>Production RAG for Decision Support</h3>
+<p>A retrieval system that gives front-line decision-makers fast, current answers drawn from a large and complex body of internal policy and external regulatory guidance, built to speed up a high-volume approval workflow. The hard parts were document parsing and the retrieval quality that depends on it. Working with the business, I assembled a validated "golden set" of question-answer pairs and ran it through an LLM-as-a-judge harness, which let the team keep improving the system against a fixed, trusted benchmark. I delivered the MVP that became the basis for the full product launch after my assignment ended.</p>
+<p><em>Stack: LangChain, ChromaDB / FAISS, document parsing, LLM-as-a-judge, custom evals</em></p>
+<h2>Predictive &amp; Causal ML</h2>
+<h3>Causal &amp; Classification for Industrial Equipment Monitoring</h3>
+<p>Two models working together on a production line. A classifier automatically assigns each production-loss event to a standard taxonomy (breakdown, minor stop, slow-down, changeover and so on), removing manual tagging by operators and standardising how losses are reported across sites that previously labelled the same events differently, which had undermined the credibility of reporting. A causal model then identifies which machine is the true root cause of a given loss, for example tracing a detected minor stop back to the upstream machine actually responsible for it. Together they make production-loss reporting both automatic and trustworthy. Deployed to production with drift detection.</p>
+<p><em>Stack: Scikit-learn, XGBoost, causal inference, Evidently, MLflow</em></p>
+<h3>Customer Retention Modelling with Experimentation</h3>
+<p>Designed the model and the A/B testing methodology end to end, to flag customers at risk of leaving or non-payment so the business could intervene proactively. It showed a statistically significant uplift versus control; I estimated the monetary value of that uplift and set the whole thing up as a reproducible pipeline that ran live throughout the pilot, rather than as a one-off analysis.</p>
+<p><em>Stack: XGBoost, A/B testing, Databricks, MLflow</em></p>
+<h3>Financial KPI Forecasting &amp; Time-Series Standards</h3>
+<p>Built end to end with full ownership, and established the time-series practices that became the organisation's standard approach. The system lets a central team deep-dive into the forecasts of individual subsidiaries, compare them against the model's, and use the gap to drive a better planning dialogue across the group. Still in use today for global financial planning.</p>
+<p><em>Stack: Prophet, PyMC, time-series modelling, statistical forecasting</em></p>
+<h2>Optimisation &amp; Decision Science</h2>
+<h3>Spare-Parts Allocation &amp; Master-Data Quality</h3>
+<p>An optimisation system that helps sites share spare parts and position them at strategic locations for rapid transport in an emergency, cutting the amount of expensive spare stock that has to be held globally. I later returned to extend it with entity deduplication and master-data quality work: cleaning and matching records so that even more parts could be reliably shared and pooled, pushing global stock down further.</p>
+<p><em>Stack: optimisation, RecordLinkage / Dedupe, PySpark, master data management</em></p>
+<h3>Transportation Optimiser (Advisory)</h3>
+<p>Brought in to shape a transportation-optimiser initiative. I defined and protected the scope, produced documentation that all stakeholders signed off on, and explained the limitations, possibilities and trade-offs the business had to weigh to deliver within its budget and resources. The value here was as much about discipline as algorithms: without a clear, agreed scope the project risked drifting in endless modification and dying when the funding ran out.</p>
+<p><em>Focus: problem framing, scoping, stakeholder alignment, delivery strategy</em></p>
+<h2>Exploration</h2>
+<p>Alongside the work above I've explored a wide range of applied ML: real-time anomaly detection for manufacturing equipment, automated data-quality validation, a product-design recommender, warehouse bin allocation, delivery-route optimisation and churn prediction. Some became tools that are still in use; all of it sharpened a sense of what actually survives contact with production.</p>
     </div>
 </article>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">Tomislav Suhina</h3>
-                    <p class="text-gray-400">Freelance Decision Scientist specializing in ML, MLOps, and data-driven solutions.</p>
+    <footer class="bg-ink text-paper/80 mt-24 blueprint-grid blueprint-grid--ink">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-2.5 mb-3">
+                        <span class="crosshair"></span>
+                        <p class="font-display text-2xl font-bold text-paper">Tomislav Suhina</p>
+                    </div>
+                    <p class="text-paper/55 max-w-sm leading-relaxed">Senior Data Scientist & AI Engineer. Production ML, agentic AI, RAG and MLOps, delivered end to end.</p>
+                    <p class="coord !text-paper/35 mt-6">52.3676&deg;N &middot; 4.9041&deg;E</p>
                 </div>
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-400 hover:text-white transition-colors no-underline">About</a></li>
-                        <li><a href="/services.html" class="text-gray-400 hover:text-white transition-colors no-underline">Services</a></li>
-                        <li><a href="/experience.html" class="text-gray-400 hover:text-white transition-colors no-underline">Experience</a></li>
-                        <li><a href="/projects.html" class="text-gray-400 hover:text-white transition-colors no-underline">Projects</a></li>
+                <div class="md:col-span-3">
+                    <p class="coord !text-accent mb-4">Navigate</p>
+                    <ul class="space-y-2.5">
+                        <li><a href="/" class="text-paper/70 hover:text-paper no-underline">About</a></li>
+                        <li><a href="/services.html" class="text-paper/70 hover:text-paper no-underline">Services</a></li>
+                        <li><a href="/experience.html" class="text-paper/70 hover:text-paper no-underline">Experience</a></li>
+                        <li><a href="/projects.html" class="text-paper/70 hover:text-paper no-underline">Projects</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
-                    <p class="text-gray-400">Get in touch to discuss your project.</p>
-                    <a href="/contact.html" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors no-underline font-medium">
-                        Contact Me
-                    </a>
+                <div class="md:col-span-4">
+                    <p class="coord !text-accent mb-4">Get in touch</p>
+                    <a href="mailto:tomislav.suhina@gmail.com" class="block text-paper hover:text-accent no-underline mb-2">tomislav.suhina@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/tsuhina" target="_blank" rel="noopener" class="block text-paper/70 hover:text-paper no-underline mb-2">linkedin.com/in/tsuhina</a>
+                    <p class="text-paper/50 text-sm mt-3">Amsterdam, Netherlands</p>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2025 Tomislav Suhina. All rights reserved.</p>
+            <div class="border-t border-paper/15 mt-12 pt-8 flex flex-col sm:flex-row justify-between gap-3 text-sm text-paper/50">
+                <p>&copy; 2026 Tomislav Suhina. All rights reserved.</p>
+                <p class="coord !text-paper/40">Independent contractor &middot; registered in NL</p>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Menu Toggle Script -->
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const overlay = document.getElementById('mobile-menu-overlay');
-            menu.classList.toggle('hidden');
+            const button = document.getElementById('mobile-menu-button');
+            const isHidden = menu.classList.toggle('hidden');
             overlay.classList.toggle('hidden');
+            button.setAttribute('aria-expanded', String(!isHidden));
         }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mobile-menu');
+                if (!menu.classList.contains('hidden')) toggleMobileMenu();
+            }
+        });
+
+        // Scroll-triggered reveals
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduce || !('IntersectionObserver' in window)) {
+                els.forEach(function (el) { el.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+            els.forEach(function (el) { io.observe(el); });
+        })();
     </script>
 </body>
 </html>

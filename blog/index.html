@@ -4,164 +4,211 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Blog - Tomislav Suhina - Freelance Decision Scientist</title>
+
+
+    <title>Blog · Tomislav Suhina - Senior Data Scientist & AI Engineer</title>
+    <meta name="description" content="Tomislav Suhina, Senior Data Scientist & AI Engineer (PhD) in Amsterdam. Production machine learning, agentic AI, RAG and MLOps, delivered end to end for clients including Heineken and Rabobank." />
+    <meta name="author" content="Tomislav Suhina" />
+    <link rel="canonical" href="https://ts-analytics.eu/blog/" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tomislav Suhina" />
+    <meta property="og:title" content="Blog · Tomislav Suhina - Senior Data Scientist & AI Engineer" />
+    <meta property="og:description" content="Tomislav Suhina, Senior Data Scientist & AI Engineer (PhD) in Amsterdam. Production machine learning, agentic AI, RAG and MLOps, delivered end to end for clients including Heineken and Rabobank." />
+    <meta property="og:image" content="https://ts-analytics.eu/images/about/cv_photo_full.JPG" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tomislav Suhina - Senior Data Scientist & AI Engineer" />
+    <meta name="twitter:description" content="Tomislav Suhina, Senior Data Scientist & AI Engineer (PhD) in Amsterdam. Production machine learning, agentic AI, RAG and MLOps, delivered end to end for clients including Heineken and Rabobank." />
+    <meta name="twitter:image" content="https://ts-analytics.eu/images/about/cv_photo_full.JPG" />
+
+    <!-- Favicon (inline SVG: blueprint TS monogram + crosshair) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230e1726'/%3E%3Cpath d='M32 10v44M10 32h44' stroke='%232f5bff' stroke-width='1.5' opacity='0.3'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='26' fill='%232f5bff' text-anchor='middle'%3ETS%3C/text%3E%3C/svg%3E" />
 
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="https://ts-analytics.eu/css/output.css" />
 
-    <!-- Google Fonts - Inter -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-        }
-    </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
-    <!-- Mobile Menu Toggle (hidden, controlled by JS) -->
-    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-20" onclick="toggleMobileMenu()"></div>
+<body class="bg-paper text-ink min-h-screen flex flex-col font-sans antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-ink focus:text-paper focus:px-4 focus:py-2">Skip to content</a>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-ink/40 z-20" onclick="toggleMobileMenu()"></div>
 
     <!-- Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo/Site Name -->
-                <div class="flex-shrink-0">
-                    <a href="https://ts-analytics.eu/" class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors no-underline">
-                        Tomislav Suhina
-                    </a>
-                </div>
+    <header class="bg-paper/90 backdrop-blur-sm border-b border-line sticky top-0 z-30">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8">
+            <div class="flex justify-between items-center py-5">
+                <!-- Wordmark -->
+                <a href="https://ts-analytics.eu/" class="group flex items-center gap-2.5 no-underline">
+                    <span class="crosshair opacity-80 group-hover:opacity-100 transition-opacity"></span>
+                    <span class="font-display text-xl font-bold text-ink tracking-tight">Tomislav Suhina</span>
+                </a>
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-1">
+                <!-- Desktop nav -->
+                <nav class="hidden md:flex items-center gap-1">
                     <a href="/"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         About
                     </a>
                     <a href="/services.html"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Services
                     </a>
                     <a href="/experience.html"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Experience
                     </a>
                     <a href="/projects.html"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Projects
                     </a>
                     <a href="/blog/"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Blog
                     </a>
                     <a href="/contact.html"
-                       class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                       class="nav-link px-3.5 py-2 text-sm font-medium text-muted hover:text-ink no-underline tracking-wide">
                         Contact
                     </a>
+                    <a href="/contact.html" class="ml-2 btn btn-accent !py-2 !px-4 text-sm no-underline">Get in touch</a>
                 </nav>
 
-                <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu">
+                <!-- Mobile toggle -->
+                <button onclick="toggleMobileMenu()" id="mobile-menu-button" class="md:hidden p-2 -mr-2 text-ink" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white shadow-lg">
-            <div class="px-4 py-2 space-y-1">
+        <!-- Mobile nav -->
+        <nav id="mobile-menu" class="hidden md:hidden border-t border-line bg-paper">
+            <div class="px-5 py-4 space-y-1">
                 <a href="/"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     About
                 </a>
                 <a href="/services.html"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Services
                 </a>
                 <a href="/experience.html"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Experience
                 </a>
                 <a href="/projects.html"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Projects
                 </a>
                 <a href="/blog/"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Blog
                 </a>
                 <a href="/contact.html"
-                   class="block px-4 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all font-medium no-underline">
+                   class="block px-3 py-3 text-base font-medium text-ink hover:text-accent no-underline border-b border-line/60">
                     Contact
                 </a>
+                <a href="/contact.html" class="block mt-4 btn btn-accent w-full justify-center no-underline">Get in touch</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow">
-<!-- Page Header -->
-<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold">Blog</h1>
+    <!-- Main -->
+    <main id="main" class="flex-grow">
+<!-- Header -->
+<section class="border-b border-line blueprint-grid overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-24">
+        <p class="eyebrow mb-6 reveal-load" style="animation-delay:.05s">Writing</p>
+        <h1 class="display text-4xl md:text-6xl mb-6 reveal-load" style="animation-delay:.15s">Notes on data science in practice.</h1>
+        <p class="text-lg text-muted max-w-2xl leading-relaxed reveal-load" style="animation-delay:.3s">Occasional writing on production ML, MLOps and the craft of delivering analytics that actually works.</p>
     </div>
 </section>
 
-<!-- Main Content -->
-<article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 prose prose-lg max-w-none">
-        <h1>Blog</h1>
-<p>Blog posts coming soon.</p>
-<p>In the meantime, feel free to <a href="/contact.html">contact me</a> or check out my <a href="/projects.html">projects</a>.</p>
+<!-- Post list -->
+<section>
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-16">
+        <p class="text-muted py-16 text-center">No posts yet. Check back soon.</p>
     </div>
-</article>
+</section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">Tomislav Suhina</h3>
-                    <p class="text-gray-400">Freelance Decision Scientist specializing in ML, MLOps, and data-driven solutions.</p>
+    <footer class="bg-ink text-paper/80 mt-24 blueprint-grid blueprint-grid--ink">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-2.5 mb-3">
+                        <span class="crosshair"></span>
+                        <p class="font-display text-2xl font-bold text-paper">Tomislav Suhina</p>
+                    </div>
+                    <p class="text-paper/55 max-w-sm leading-relaxed">Senior Data Scientist & AI Engineer. Production ML, agentic AI, RAG and MLOps, delivered end to end.</p>
+                    <p class="coord !text-paper/35 mt-6">52.3676&deg;N &middot; 4.9041&deg;E</p>
                 </div>
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="text-gray-400 hover:text-white transition-colors no-underline">About</a></li>
-                        <li><a href="/services.html" class="text-gray-400 hover:text-white transition-colors no-underline">Services</a></li>
-                        <li><a href="/experience.html" class="text-gray-400 hover:text-white transition-colors no-underline">Experience</a></li>
-                        <li><a href="/projects.html" class="text-gray-400 hover:text-white transition-colors no-underline">Projects</a></li>
+                <div class="md:col-span-3">
+                    <p class="coord !text-accent mb-4">Navigate</p>
+                    <ul class="space-y-2.5">
+                        <li><a href="/" class="text-paper/70 hover:text-paper no-underline">About</a></li>
+                        <li><a href="/services.html" class="text-paper/70 hover:text-paper no-underline">Services</a></li>
+                        <li><a href="/experience.html" class="text-paper/70 hover:text-paper no-underline">Experience</a></li>
+                        <li><a href="/projects.html" class="text-paper/70 hover:text-paper no-underline">Projects</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
-                    <p class="text-gray-400">Get in touch to discuss your project.</p>
-                    <a href="/contact.html" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors no-underline font-medium">
-                        Contact Me
-                    </a>
+                <div class="md:col-span-4">
+                    <p class="coord !text-accent mb-4">Get in touch</p>
+                    <a href="mailto:tomislav.suhina@gmail.com" class="block text-paper hover:text-accent no-underline mb-2">tomislav.suhina@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/tsuhina" target="_blank" rel="noopener" class="block text-paper/70 hover:text-paper no-underline mb-2">linkedin.com/in/tsuhina</a>
+                    <p class="text-paper/50 text-sm mt-3">Amsterdam, Netherlands</p>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2025 Tomislav Suhina. All rights reserved.</p>
+            <div class="border-t border-paper/15 mt-12 pt-8 flex flex-col sm:flex-row justify-between gap-3 text-sm text-paper/50">
+                <p>&copy; 2026 Tomislav Suhina. All rights reserved.</p>
+                <p class="coord !text-paper/40">Independent contractor &middot; registered in NL</p>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Menu Toggle Script -->
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const overlay = document.getElementById('mobile-menu-overlay');
-            menu.classList.toggle('hidden');
+            const button = document.getElementById('mobile-menu-button');
+            const isHidden = menu.classList.toggle('hidden');
             overlay.classList.toggle('hidden');
+            button.setAttribute('aria-expanded', String(!isHidden));
         }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mobile-menu');
+                if (!menu.classList.contains('hidden')) toggleMobileMenu();
+            }
+        });
+
+        // Scroll-triggered reveals
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduce || !('IntersectionObserver' in window)) {
+                els.forEach(function (el) { el.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+            els.forEach(function (el) { io.observe(el); });
+        })();
     </script>
 </body>
 </html>
